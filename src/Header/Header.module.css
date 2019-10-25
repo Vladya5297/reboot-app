@@ -1,0 +1,22 @@
+:root {
+    --main-color: #fcfcfc;
+    --text-color: #8f8f8f;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}

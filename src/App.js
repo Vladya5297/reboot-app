@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './Header/Header'
+import HeaderButton from './HeaderButton/HeaderButton'
 import './App.css';
 
 function App() {
+  const left = [{id: "1", icon: "@", text: "Jopa"}];
+  const right = ["start", "launch", "account"];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Header
+        left={
+          left.map((elem)=>{
+            return <HeaderButton
+            key={elem.id}
+            icon={elem.icon}
+            text={elem.text}>
+            </HeaderButton>;
+          })
+        }
+        right={right.map((elem)=><div style={{padding: 5 + 'px'}}>{elem}</div>)}
+        ></Header>
     </div>
   );
 }
