@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header/Header'
 import HeaderButton from './HeaderButton/HeaderButton'
 import './App.css';
+import AddButton from './AddButton/AddButton';
 
 function App() {
   const left = [{id: "1", icon: "@", text: "Jopa"}];
@@ -20,6 +21,7 @@ function App() {
         }
         right={right.map((elem)=><div style={{padding: 5 + 'px'}}>{elem}</div>)}
         ></Header>
+      <AddButton />
     </div>
   );
 }
