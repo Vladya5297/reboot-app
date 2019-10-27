@@ -22,7 +22,8 @@ function App() {
     }
     right={right.map((elem) => <div style={{padding: 5 + 'px'}}>{elem}</div>)}
     />
-      <AddButton />
+      <AddButton
+      />
       <TwiceArea/>
 
     </div>
