@@ -3,6 +3,7 @@ import Header from './Header/Header'
 import HeaderButton from './HeaderButton/HeaderButton'
 import './App.css';
 import AddButton from './AddButton/AddButton';
+import TwiceArea from "./TwiceArea/TwiceArea";
 
 function App() {
   const left = [{id: "1", icon: "@", text: "Jopa"}];
@@ -10,18 +11,20 @@ function App() {
   return (
     <div className="App">
         <Header
-        left={
-          left.map((elem)=>{
+    left={
+        left.map((elem) => {
             return <HeaderButton
-            key={elem.id}
-            icon={elem.icon}
-            text={elem.text}>
+                key={elem.id}
+                icon={elem.icon}
+                text={elem.text}>
             </HeaderButton>;
-          })
-        }
-        right={right.map((elem)=><div style={{padding: 5 + 'px'}}>{elem}</div>)}
-        ></Header>
+        })
+    }
+    right={right.map((elem) => <div style={{padding: 5 + 'px'}}>{elem}</div>)}
+    />
       <AddButton />
+      <TwiceArea/>
+
     </div>
   );
 }

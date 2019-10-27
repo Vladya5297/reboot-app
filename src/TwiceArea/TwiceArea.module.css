@@ -1,0 +1,26 @@
+
+.wrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*это уберем, существует просто для отображения*/
+    border: 2px solid red;
+
+    /*потом сюда запихаем точное расположение и размеры*/
+    margin-top: 6%;
+    margin-left: 7%;
+    margin-right:58%;
+    width: 400px;
+    height: 200px;
+
+}
+
+.top {
+
+}
+
+.bottom {
+
+}
