@@ -1,22 +1,27 @@
-:root {
-    --main-color: #fcfcfc;
-    --text-color: #8f8f8f;
-}
-
 .wrapper {
+    --main-color: #FCFCFC;
+    --accent-color: #A6ADB4;
     display: flex;
     justify-content: space-between;
-    background-color: var(--main-color);
-    color: var(--text-color);
-    
+    background-color: var(--main-color);    
 }
 
 .left {
+    flex: 2;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .right {
+    flex: 2;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }

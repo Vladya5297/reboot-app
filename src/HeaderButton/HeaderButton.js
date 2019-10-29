@@ -1,6 +1,8 @@
 import React from 'react';
 import * as style from './HeaderButton.module.css'
 
+// Кнопка шапки
+// в параметрах принимает иконку и текст
 const HeaderButton = (props) => {
     return (
         <div className={style.wrapper}>

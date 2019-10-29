@@ -1,0 +1,22 @@
+/*устанавливаем высоту блоков по размеру экрана*/
+html, body, #root, .App {
+    height: 100%;
+}
+
+/*позиционируем заголовок над основной частью*/
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
+/*устанавливаем высоту основной части на весь экран
+позиционируем содержимое, устанавливаем фоновый цвет,
+с помощью padding задаём расстояние между объектами*/
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #E4E4E4;
+}
