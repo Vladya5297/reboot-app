@@ -26,17 +26,18 @@ const MainAreaContainer = (props) => {
   // создаём массив сегметов
   // ДОПОЛНИТЬ НУЖНЫМИ ПОЛЯМИ
   let segments = [
-    {id: 1, top: true},
-    {id: 2, top: true},
-    {id: 3, top: false},
-    {id: 4, top: true},
-    {id: 5, top: true},
-    {id: 6, top: false},
-    {id: 7, top: false},
+    {id: 8, top: true},
+    {id: 9, top: true},
+    {id: 10, top: false},
+    {id: 11, top: true},
+    {id: 12, top: true},
+    {id: 13, top: false},
+    {id: 14, top: false},
   ];
 
   segments = segments.map((elem, ind)=>{
     return {
+        id: ind,
         title: segmentTitles[ind],
         content: <Segment key={elem.id} />,
         top: elem.top
@@ -45,7 +46,7 @@ const MainAreaContainer = (props) => {
 
   // массив сегментов с позиционированными заголовками
   segments = segments.map((elem)=>{
-      return (<div className={style["segment-wrapper"]}>
+      return (<div key={elem.id} className={style["segment-wrapper"]}>
           {elem.top ? [elem.title, elem.content] : [elem.content, elem.title]}
       </div>)
   });
