@@ -31,18 +31,24 @@ function App() {
         </Header>
 
         <main>
+          <div className="work-area-wrapper">
+            <h1>ПРОДУКТ</h1>
           <WorkArea topElemCount="2">
             <div style={{flex: 1, border: 'solid 1px black'}}></div>
             <div style={{flex: 1, border: 'solid 1px black'}}></div>
             <div style={{flex: 1, border: 'solid 1px black'}}></div>
           </WorkArea>
-
+          </div>
+          
+          <div className="work-area-wrapper">
+          <h1>КЛИЕНТ</h1>
           <WorkArea topElemCount="2">
             <div style={{flex: 1, border: 'solid 1px black'}}></div>
             <div style={{flex: 1, border: 'solid 1px black'}}></div>
             <div style={{flex: 1, border: 'solid 1px black'}}></div>
             <div style={{flex: 1, border: 'solid 1px black'}}></div>
           </WorkArea>
+          </div>
         </main>
     </div>
   );

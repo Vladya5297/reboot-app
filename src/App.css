@@ -1,10 +1,6 @@
-/*устанавливаем высоту блоков по размеру экрана*/
-html, body, #root, .App {
-    height: 100%;
-}
-
 /*позиционируем заголовок над основной частью*/
 .App {
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -17,6 +13,16 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 5vw;
     background-color: #E4E4E4;
+}
+
+.work-area-wrapper {
+    height: 100%;
+    padding-bottom: 10vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

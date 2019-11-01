@@ -3,8 +3,8 @@
 делаем относительное позиционирование,
 чтобы разместить иконку по центру*/
 .wrapper {
-    width: 450px;
-    height: 450px;
+    width: 30vw;
+    height: 30vw;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -23,8 +23,8 @@
     top: 0;
     margin: auto;
     border: solid 5px rgb(250, 0, 0);
-    width: 100px;
-    height: 100px;
+    width: 10vh;
+    height: 10vh;
 }
 
 /*резмер верхнего блока равен размеру
