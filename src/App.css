@@ -4,25 +4,3 @@
     display: flex;
     flex-direction: column;
 }
-
-/*устанавливаем высоту основной части на весь экран
-позиционируем содержимое, устанавливаем фоновый цвет,
-с помощью padding задаём расстояние между объектами*/
-main {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 5vw;
-    background-color: #E4E4E4;
-}
-
-.work-area-wrapper {
-    height: 100%;
-    padding-bottom: 10vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}

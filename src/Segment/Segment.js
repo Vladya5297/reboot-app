@@ -1,7 +1,7 @@
 import React from 'react';
-import * as style from './WorkAreaSegment.module.css'
+import * as style from './Segment.module.css'
 
-const WorkAreaSegment = (props) => {
+const Segment = (props) => {
     // сюда подключаем библиотеку
     return (
         <div className={style.wrapper}>
@@ -10,4 +10,4 @@ const WorkAreaSegment = (props) => {
     )
 }
 
-export default WorkAreaSegment;
+export default Segment;

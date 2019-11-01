@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header/Header'
 import HeaderButton from './HeaderButton/HeaderButton'
 import AddButton from './AddButton/AddButton'
-import WorkArea from './WorkArea/WorkArea'
+import MainArea from './MainArea/MainAreaContainer'
 import './App.css';
 
 function App() {
@@ -16,8 +16,7 @@ function App() {
     return (<HeaderButton
     key={elem.id}
     icon={elem.icon}
-    text={elem.text}>
-    </HeaderButton>);
+    text={elem.text} />);
   });
 
   buttons.push(<AddButton key="5" icon="+" text="СТИКЕР"
@@ -29,27 +28,7 @@ function App() {
         <Header leftElemCount = {1}>
           {buttons}
         </Header>
-
-        <main>
-          <div className="work-area-wrapper">
-            <h1>ПРОДУКТ</h1>
-          <WorkArea topElemCount="2">
-            <div style={{flex: 1, border: 'solid 1px black'}}></div>
-            <div style={{flex: 1, border: 'solid 1px black'}}></div>
-            <div style={{flex: 1, border: 'solid 1px black'}}></div>
-          </WorkArea>
-          </div>
-          
-          <div className="work-area-wrapper">
-          <h1>КЛИЕНТ</h1>
-          <WorkArea topElemCount="2">
-            <div style={{flex: 1, border: 'solid 1px black'}}></div>
-            <div style={{flex: 1, border: 'solid 1px black'}}></div>
-            <div style={{flex: 1, border: 'solid 1px black'}}></div>
-            <div style={{flex: 1, border: 'solid 1px black'}}></div>
-          </WorkArea>
-          </div>
-        </main>
+        <MainArea />
     </div>
   );
 }
