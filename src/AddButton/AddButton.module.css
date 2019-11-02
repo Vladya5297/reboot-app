@@ -1,41 +1,24 @@
 .wrapper {
-  position: absolute;
-  width: 100px;
-  height: 75px;
-  background-color: #A6ADB4;
-  user-select: none;
-  cursor: pointer;
-  transition: 0.3s;
-  right: 85px;
-  bottom: 65px;
+    --text-color: #FFFFFF;
+    --main-color: #A6ADB4;
+    --hover-color: #707070;
+    margin: 5px;
+    padding: 5px;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.wrapper:hover  {
-  background-color: darkgrey;
+.wrapper:hover {
+    background-color: var(--hover-color);
 }
 
-.plus {
-position: absolute;
-right: 17.5px;
-top: 12.5px;
-width: 50px;
-height: 50px;
+.icon {
+    height: 1rem;
 }
 
-.plus:before, .plus:after {
-position: absolute;
-left: 15px;
-content: ' ';
-height: 50px;
-width: 3px;
-background-color: white;
-border-radius: 2px;
-}
-
-.plus:before {
-transform: rotate(90deg);
-}
-
-.plus:after {
-transform: rotate(0deg);
+.text {
+    height: 1rem;
 }

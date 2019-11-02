@@ -1,12 +1,15 @@
 .wrapper {
+    --text-color: #707070;
+    --hover-color: #9E9E9E;
     padding: 5px;
+    color: var(--text-color);
     user-select: none;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .wrapper:hover {
-    background-color: darkgray;
+    color: var(--hover-color);
 }
 
 .icon {
