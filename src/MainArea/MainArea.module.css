@@ -1,10 +1,5 @@
-.segment-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* flex: 1 - для того, чтобы область занимала всё место под header'ом
+   padding - можно настраивать, чтобы сближать/отдалять рабочие области */
 .main {
     flex: 1;
     display: flex;
@@ -14,9 +9,9 @@
     background-color: #E4E4E4;
 }
 
+/* контейнер для заголовка и рабочей области */
 .work-area-wrapper {
     height: 100%;
-    padding-bottom: 10vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -24,6 +19,15 @@
     align-items: center;
 }
 
+/* нижний отступ заголовка рабочей области */
 .title {
     margin-bottom: 5vh;
+}
+
+/* контейнер для сегмента и его заголовка */
+.segment-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

@@ -7,15 +7,15 @@ const MainArea = (props) => {
     <div className={style.main}>
           <div className={style["work-area-wrapper"]}>
             <div className={style.title}>ПРОДУКТ</div>
-            <WorkArea topElemCount="2">
-                {props.children.slice(0,props.segmentsNumLeft)}
+            <WorkArea>
+                {props.children[0]}
             </WorkArea>
           </div>
           
           <div className={style["work-area-wrapper"]}>
             <div className={style.title}>КЛИЕНТ</div>
-            <WorkArea topElemCount="2">
-                {props.children.slice(props.segmentsNumLeft)}
+            <WorkArea>
+                {props.children[1]}
             </WorkArea>
           </div>
         </div>

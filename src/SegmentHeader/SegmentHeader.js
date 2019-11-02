@@ -6,9 +6,7 @@ const SegmentHeader = (props) => {
     return (
         <div className={style.wrapper}>
             {props.title}
-            <HelpIcon helpText={props.helpText}>
-
-            </HelpIcon>
+            <HelpIcon helpText={props.helpText} />
         </div>
     )
 }
