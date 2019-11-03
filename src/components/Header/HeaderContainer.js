@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../Header/Header'
+import Header from './Header'
 import HeaderButton from '../HeaderButton/HeaderButton'
-import AddButton from '../AddButton/AddButton'
+import AddButton from '../AddButton/AddButtonContainer'
 
 const HeaderContainer = (props) => {
     // создаём массив кнопок, поле id требуется для метода map

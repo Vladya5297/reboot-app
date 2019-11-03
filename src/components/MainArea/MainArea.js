@@ -1,5 +1,6 @@
 import React from 'react'
 import WorkArea from '../WorkArea/WorkArea'
+import NewStickerZone from '../NewStickerZone/NewStickerZoneContainer'
 import * as style from './MainArea.module.css'
 
 const MainArea = (props) => {
@@ -12,6 +13,8 @@ const MainArea = (props) => {
             </WorkArea>
           </div>
           
+          <NewStickerZone />
+
           <div className={style["work-area-wrapper"]}>
             <div className={style.title}>КЛИЕНТ</div>
             <WorkArea>
