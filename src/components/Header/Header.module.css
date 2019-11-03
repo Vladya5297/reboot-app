@@ -1,0 +1,29 @@
+.wrapper {
+    --main-color: #FCFCFC;
+    --accent-color: #A6ADB4;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);    
+}
+
+.left {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2vw;
+}
+
+.right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2vw;
+}
+
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}

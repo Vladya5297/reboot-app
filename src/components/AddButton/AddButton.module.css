@@ -1,0 +1,24 @@
+.wrapper {
+    --text-color: #FFFFFF;
+    --main-color: #A6ADB4;
+    --hover-color: #707070;
+    margin: 5px;
+    padding: 5px;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wrapper:hover {
+    background-color: var(--hover-color);
+}
+
+.icon {
+    height: 1rem;
+}
+
+.text {
+    height: 1rem;
+}

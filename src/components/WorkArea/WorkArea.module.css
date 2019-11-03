@@ -1,0 +1,37 @@
+/*устанавливаем размеры квадрата,
+задаём направление внутренних блоков,
+делаем относительное позиционирование,
+чтобы разместить иконку по центру*/
+.wrapper {
+    width: 35vw;
+    height: 35vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*центрирование иконки внутри блока,
+создание рамки*/
+.icon img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    border: solid 4px #E4E4E4;
+    width: 10vh;
+    height: 10vh;
+}
+
+/*резмер верхнего блока равен размеру
+нижнего блока, и составляет 50% размера всего квадрата*/
+.top {
+    flex: 1;
+    display: flex;
+}
+
+.bottom {
+    flex: 1;
+    display: flex;
+}
