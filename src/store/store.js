@@ -1,4 +1,9 @@
-/* Создаём store из редьюсеров, тут менять ничего не надо */
-import { createStore } from 'redux'
-import reducers from './reducers'
-export default createStore(reducers);
+/* Создаём store из редьюсеров, импортируем сюда каждый новосозданный
+редьюсер и дописываем в combineReducers*/
+import { createStore, combineReducers } from 'redux'
+import stickers from './stickers'
+
+export default createStore(combineReducers({
+    stickers,
+}),
+window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

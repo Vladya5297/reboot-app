@@ -3,31 +3,32 @@
 именно нужно изменить в state. Дополнительные поля в объекте 
 action могут быть любыми. Важно: редьюсер должен
 возвращать именно новый объект. Чтобы добавить новый
-функционал, пишем в этом файле новую функцию-редьюсер
+функционал, пишем в новом файле новую функцию-редьюсер
 и дописываем её имя в combineReducers */
-import {combineReducers} from 'redux'
-import * as type from './actionTypes'
+import { ADD_STICKER } from './actionTypes'
 
 /* Всегда параметром по умалчанию прокидываем начальное состояние,
 можно пустое, главное, чтобы редьюсер не возвращал undefined */
 const initialState = {
-    Benefits: [],
-    Advantages: [],
-    ProblemSolvings: [],
-    Desires: [],
-    Solutions: [],
-    Tasks: [],
-    Problems: [],
+    array: [],
+    currentId: 0,
 }
 
-/* После всех кейсов нужно в default вернуть исходный state */
-function stickers(state = initialState, action) {
+/* В блоке switch после всех кейсов нужно в default вернуть исходный state */
+export default (state = initialState, action) => {
     switch (action.type) {
-        case type.ADD_STICKER:
-            const newSticker = {title: "SampleText"}
-            return {...state, 
-                [action.segment]: [
-                    ...state[action.segment],
+        case ADD_STICKER:
+            const newSticker = {
+                header: "SampleText",
+                content: "Drag me",
+                position: 0,
+                segment: "NewStickers",
+                id: state.currentId + 1
+            }
+            return {...state,
+                currentId: state.currentId + 1, 
+                array: [
+                    ...state.array,
                     newSticker
                 ]
             };
@@ -35,7 +36,3 @@ function stickers(state = initialState, action) {
             return state;
         }
 }
-
-export default combineReducers({
-    stickers,
-});

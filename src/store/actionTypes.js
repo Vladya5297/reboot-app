@@ -4,4 +4,4 @@
 
 export const ADD_STICKER = "ADD_STICKER";
 export const REMOVE_STICKER = "REMOVE_STICKER";
-export const UPDATE_STICKER = "ADD_STICKER";
+export const UPDATE_STICKER = "UPDATE_STICKER";
