@@ -13,18 +13,20 @@ const Segment = (props) => {
         drop: () => ({type: props.type}),
       });
     return (
-        <div ref={drop}
-        className={style.wrapper}>
-            {isOver && <div className={style.focused} />}
-            {props.stickers.map((elem) => (
-                <Sticker
-                key={elem.id} 
-                header={elem.header}
-                content={elem.content}
-                position={props.stickers.length}
-                id={elem.id}
-                type={elem.type} />
-            ))}
+        <div className={style.wrapper}>
+            <div ref={drop}
+            className={style.dropzone}>
+                {isOver && <div className={style.focused} />}
+                {props.stickers.map((elem) => (
+                    <Sticker
+                    key={elem.id} 
+                    header={elem.header}
+                    content={elem.content}
+                    position={props.stickers.length}
+                    id={elem.id}
+                    type={elem.type} />
+                ))}
+            </div>
         </div>
     )
 }
