@@ -1,15 +1,11 @@
 import React from 'react'
-import Sticker from '../Sticker/Sticker'
+import Sticker from '../Sticker/StickerContainer'
 import * as style from './NewStickerZone.module.css'
 
 const NewStickerZone = (props)=>{
     return (
         <div className={style.wrapper}>
-            {props.sticker.map((elem)=>{
-                return (
-                    <Sticker />
-                );
-            })}
+            {props.sticker && <Sticker id={props.sticker.id} type={props.sticker.type}/>}
         </div>
     );
 }

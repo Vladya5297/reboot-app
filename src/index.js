@@ -5,12 +5,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import store from './store/store'
+import HTML5Backend from 'react-dnd-html5-backend'
+import { DndProvider } from 'react-dnd'
 
 /* оборачиваем весь App в Provider, чтобы 
 store был доступен внутри компонентов */
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <DndProvider backend={HTML5Backend}>
+            <App />
+        </DndProvider>
     </Provider>, 
     document.getElementById('root')
     );
