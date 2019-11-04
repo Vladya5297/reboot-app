@@ -28,7 +28,7 @@ const HeaderContainer = (props) => {
     <Header>
         <HeaderButton icon={croc} />
         {rightButtons}
-        <AddButton icon={plus} text="СТИКЕР " />
+        <AddButton icon= "" text="СТИКЕР" />
     </Header>
   )
 }

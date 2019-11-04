@@ -13,7 +13,11 @@ const MainAreaContainer = (props) => {
     {title: 'Выгода', helpText: 'SampleText'},
     {title: 'Преимущества', helpText: 'SampleText'},
     {title: 'Как продукт решает проблему', helpText: 'SampleText'},
-    {title: 'Желания', helpText: 'SampleText'},
+    {title: 'Желания', helpText: '- Какие бизнес- задачи стоят перед клиентом?\n' +
+          '- Что наиболее ценно для клиента  с точки зрения денег, времени и усилий?\n' +
+          '- Какой уровень качества он ожидает получить?\n' +
+          '- Какие выгоды клиент получает сейчас, когда пользуется тем что имеет?\n' +
+          '- Как клиент измеряет успех или неудачу?'},
     {title: 'Решения', helpText: 'SampleText'},
     {title: 'Задачи', helpText: 'SampleText'},
     {title: 'Проблемы', helpText: 'SampleText'},

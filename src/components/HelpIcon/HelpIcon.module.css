@@ -31,6 +31,7 @@
     z-index: 99;
 }
 .icon:hover {
+    cursor: help;
     opacity: 0.5;
 }
 .icon{

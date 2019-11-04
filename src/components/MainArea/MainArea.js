@@ -8,7 +8,6 @@ import man  from '../../icons/iconsSVG/КлиектИконка.svg'
 import light from '../../icons/iconsSVG/ЛампочкаИконка.svg'
 
 const MainArea = (props) => {
-    console.log(props.children)
     return (
     <div className={style.main}>
           <div className={style["work-area-wrapper"]}>

@@ -19,9 +19,13 @@
     align-items: center;
 }
 
+
 /* нижний отступ заголовка рабочей области */
 .title {
+    font-family: "Arial";
+    color: #707070;
     margin-bottom: 5vh;
+    font-size: 3.5vh;
 }
 
 /* контейнер для сегмента и его заголовка */

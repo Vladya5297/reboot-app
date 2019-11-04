@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18">
-  <g id="ПродолжитьИконка" transform="translate(10) rotate(90)" fill="#fff">
-    <path d="M 16.87731742858887 9.5 L 1.122681975364685 9.5 L 9 0.7474244236946106 L 16.87731742858887 9.5 Z" stroke="none"/>
-    <path d="M 9 1.494837760925293 L 2.245353698730469 9 L 15.75464630126953 9 L 9 1.494837760925293 M 9 0 L 18 10 L 0 10 L 9 0 Z" stroke="none" fill="#707070"/>
-  </g>
-</svg>
