@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { showDeleteZone, hideDeleteZone } from '../../store/actionCreators'
+import { showDeleteZone, hideDeleteZone, deleteSticker } from '../../store/actionCreators'
 import Sticker from './Sticker'
 
 // const mapStateToProps = (state) => ({
@@ -8,7 +8,8 @@ import Sticker from './Sticker'
 
 const mapDispatchToProps = (dispatch) => ({
     showDeleteZone: () => dispatch(showDeleteZone()),
-    hideDeleteZone: () => dispatch(hideDeleteZone())
+    hideDeleteZone: () => dispatch(hideDeleteZone()),
+    deleteSticker: (id) => dispatch(deleteSticker(id)),
 })
 
 export default connect(
