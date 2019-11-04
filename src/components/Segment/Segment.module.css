@@ -1,7 +1,15 @@
 .wrapper {
+    position: relative;
     height: 100%;
     width: 100%;
     border: solid 3px #E4E4E4;
     box-sizing: border-box;
     background-color: white;
+}
+
+.focused {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 5px 2px purple;
 }

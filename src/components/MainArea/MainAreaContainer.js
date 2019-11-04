@@ -1,6 +1,7 @@
 import React from 'react'
 import Segment from '../Segment/Segment'
 import SegmentHeader from '../SegmentHeader/SegmentHeader'
+import * as types from '../../store/itemTypes'
 import * as style from './MainArea.module.css'
 import MainArea from './MainArea';
 
@@ -9,58 +10,60 @@ import MainArea from './MainArea';
 const MainAreaContainer = (props) => {
 // создаём массив заголовков сегметов
   let segmentTitles = [
-    {id: 1, title: 'Выгода', helpText: 'SampleText'},
-    {id: 2, title: 'Преимущества', helpText: 'SampleText'},
-    {id: 3, title: 'Как продукт решает проблему', helpText: 'SampleText'},
-    {id: 4, title: 'Желания', helpText: 'SampleText'},
-    {id: 5, title: 'Решения', helpText: 'SampleText'},
-    {id: 6, title: 'Задачи', helpText: 'SampleText'},
-    {id: 7, title: 'Проблемы', helpText: 'SampleText'},
+    {title: 'Выгода', helpText: 'SampleText'},
+    {title: 'Преимущества', helpText: 'SampleText'},
+    {title: 'Как продукт решает проблему', helpText: 'SampleText'},
+    {title: 'Желания', helpText: 'SampleText'},
+    {title: 'Решения', helpText: 'SampleText'},
+    {title: 'Задачи', helpText: 'SampleText'},
+    {title: 'Проблемы', helpText: 'SampleText'},
   ];
-
-  segmentTitles = segmentTitles.map((elem)=>{
-    return (<SegmentHeader
-     key={elem.id}
-     title = {elem.title}
-     helpText = {elem.helpText} />);
-  });
 
   // создаём массив сегметов
   // id начинаются с восьмого во славу древних богов
   // иначе компилятор ругается, что айдишники совпадают с массивом заголовков
   // ДОПОЛНИТЬ НУЖНЫМИ ПОЛЯМИ
   let segments = [
-    {id: 8, top: true},
-    {id: 9, top: true},
-    {id: 10, top: false},
-    {id: 11, top: true},
-    {id: 12, top: true},
-    {id: 13, top: false},
-    {id: 14, top: false},
+    {type: types.benefits},
+    {type: types.advantages},
+    {type: types.problemSolvings},
+    {type: types.desires},
+    {type: types.solutions},
+    {type: types.tasks},
+    {type: types.problems},
+  ]
+
+  let positions = [
+    {id: 1, top: true},
+    {id: 2, top: true},
+    {id: 3, top: false},
+    {id: 4, top: true},
+    {id: 5, top: true},
+    {id: 6, top: false},
+    {id: 7, top: false},
   ];
 
-  segments = segments.map((elem, ind)=>{
-    return {
-        id: ind,
-        title: segmentTitles[ind],
-        content: <Segment key={elem.id} />,
-        top: elem.top
-    }
-  });
-
-  // массив сегментов с позиционированными заголовками
-  segments = segments.map((elem)=>{
-      return (<div key={elem.id} className={style["segment-wrapper"]}>
-          {elem.top ? [elem.title, elem.content] : [elem.content, elem.title]}
-      </div>)
-  });
+  let childComponents = positions.map((elem, ind)=>{
+    let header = <SegmentHeader
+    key = {segmentTitles[ind].title}
+    title = {segmentTitles[ind].title}
+    helpText = {segmentTitles[ind].helpText} 
+    />
+    let content = <Segment 
+    key={segments[ind].type}
+    type={segments[ind].type}
+    />
+    return (<div key={elem.id} className={style["segment-wrapper"]}>
+        {elem.top ? [header, content] : [content, header]}
+    </div>)
+});
 
   // прокидывание полученного в основной компонент
   // первый массив - в левую область, остальное - в правую
   return (
       <MainArea>
-          {segments.slice(0, 3)}
-          {segments.slice(3)}
+          {childComponents.slice(0, 3)}
+          {childComponents.slice(3)}
       </MainArea>
   )
 }

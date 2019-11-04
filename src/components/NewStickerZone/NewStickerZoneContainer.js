@@ -1,9 +1,10 @@
 import { connect } from 'react-redux'
+import {newSticker} from '../../store/itemTypes'
 import NewStickerZone from './NewStickerZone'
 
 const mapStateToProps = (state) => ({
     sticker: state.stickers.array.filter(
-        (elem)=>{return elem.type === "NewSticker"}
+        (elem)=>{return elem.type === newSticker}
     )[0]
 });
 
