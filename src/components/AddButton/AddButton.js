@@ -7,11 +7,8 @@ const AddButton = (props) => {
         <div className={style.wrapper} 
         style={{pointerEvents: isActive ? "auto" : "none"}}
         onClick={isActive ? props.addSticker : undefined}>
-            <div className={style.text}>{props.text}
-            </div>
-            <div className={style.icon}>
-                {props.icon}
-            </div>
+            <span className={style.text}> {props.text} </span>
+            <span className={style.icon} style={{backgroundImage: "url("+props.icon+")"}}> </span>
         </div>
     )
 }
