@@ -1,6 +1,7 @@
 import React from 'react';
 import {useDrop} from 'react-dnd'
 import {newSticker} from '../../store/itemTypes'
+import Sticker from '../Sticker/StickerContainer'
 import * as style from './Segment.module.css'
 
 const Segment = (props) => {
@@ -15,7 +16,15 @@ const Segment = (props) => {
         <div ref={drop}
         className={style.wrapper}>
             {isOver && <div className={style.focused} />}
-            {props.children}
+            {props.stickers.map((elem) => (
+                <Sticker
+                key={elem.id} 
+                header={elem.header}
+                content={elem.content}
+                position={props.stickers.length}
+                id={elem.id}
+                type={elem.type} />
+            ))}
         </div>
     )
 }

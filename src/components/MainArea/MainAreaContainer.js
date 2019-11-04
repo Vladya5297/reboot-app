@@ -1,5 +1,5 @@
 import React from 'react'
-import Segment from '../Segment/Segment'
+import Segment from '../Segment/SegmentContainer'
 import SegmentHeader from '../SegmentHeader/SegmentHeader'
 import * as types from '../../store/itemTypes'
 import * as style from './MainArea.module.css'
