@@ -53,6 +53,7 @@ const MainAreaContainer = (props) => {
     key={segments[ind].type}
     type={segments[ind].type}
     />
+
     return (<div key={elem.id} className={style["segment-wrapper"]}>
         {elem.top ? [header, content] : [content, header]}
     </div>)
