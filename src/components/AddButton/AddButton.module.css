@@ -9,6 +9,9 @@
     user-select: none;
     cursor: pointer;
     transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .wrapper:hover {
@@ -21,4 +24,5 @@
 
 .text {
     height: 1rem;
+    padding-right: 4px;
 }

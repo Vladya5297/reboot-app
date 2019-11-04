@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './components/Header/HeaderContainer'
 import MainArea from './components/MainArea/MainAreaContainer'
 import './App.css';
-import AddButton from './AddButton/AddButton';
 
 function App() {
   
