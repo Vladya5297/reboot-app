@@ -17,11 +17,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 3vh;
 }
+
 
 /* нижний отступ заголовка рабочей области */
 .title {
-    margin-bottom: 5vh;
+    font-family: "Arial";
+    color: #707070;
+    margin-bottom: 3vh;
+    font-size: 3.5vh;
 }
 
 /* контейнер для сегмента и его заголовка */

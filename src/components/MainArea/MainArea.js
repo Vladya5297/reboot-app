@@ -4,12 +4,15 @@ import NewStickerZone from '../NewStickerZone/NewStickerZoneContainer'
 import DeleteStickerZone from '../DeleteStickerZone/DeleteStickerZoneContainer'
 import * as style from './MainArea.module.css'
 
+import clientIcon  from '../../icons/iconsSVG/ClientIcon.svg'
+import bulbIcon from '../../icons/iconsSVG/BulbIcon.svg'
+
 const MainArea = (props) => {
     return (
     <div className={style.main}>
           <div className={style["work-area-wrapper"]}>
             <div className={style.title}>ПРОДУКТ</div>
-            <WorkArea>
+            <WorkArea icon = {bulbIcon}>
                 {props.children[0]}
             </WorkArea>
           </div>
@@ -19,7 +22,7 @@ const MainArea = (props) => {
 
           <div className={style["work-area-wrapper"]}>
             <div className={style.title}>КЛИЕНТ</div>
-            <WorkArea>
+            <WorkArea icon = {clientIcon}>
                 {props.children[1]}
             </WorkArea>
           </div>

@@ -12,7 +12,11 @@
 
 /*центрирование иконки внутри блока,
 создание рамки*/
-.icon img{
+.icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FFFFFF;
     position: absolute;
     left: 0;
     right: 0;
@@ -22,7 +26,6 @@
     border: solid 4px #E4E4E4;
     width: 10vh;
     height: 10vh;
-    z-index: 1;
 }
 
 /*резмер верхнего блока равен размеру

@@ -6,7 +6,7 @@ import * as style from './HeaderButton.module.css'
 const HeaderButton = (props) => {
     return (
         <div className={style.wrapper}>
-            <span className={style.icon}>{props.icon}</span>
+            <span className={style.icon} style={{backgroundImage: "url("+props.icon+")"}}></span>
             <span className={style.text}>{props.text}</span>
         </div>
     );
