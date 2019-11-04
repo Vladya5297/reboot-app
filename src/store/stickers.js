@@ -5,7 +5,7 @@ action могут быть любыми. Важно: редьюсер долже
 возвращать именно новый объект. Чтобы добавить новый
 функционал, пишем в новом файле новую функцию-редьюсер
 и дописываем её имя в combineReducers */
-import { ADD_STICKER } from './actionTypes'
+import { ADD_STICKER, DELETE_STICKER } from './actionTypes'
 
 /* Всегда параметром по умалчанию прокидываем начальное состояние,
 можно пустое, главное, чтобы редьюсер не возвращал undefined */
@@ -22,14 +22,20 @@ export default (state = initialState, action) => {
                 header: "SampleText",
                 content: "Drag me",
                 position: 0,
-                segment: "NewStickers",
-                id: state.currentId + 1
+                id: state.currentId + 1,
+                type: "NewSticker"
             }
             return {...state,
                 currentId: state.currentId + 1, 
                 array: [
                     ...state.array,
                     newSticker
+                ]
+            };
+        case DELETE_STICKER:
+            return {...state,
+                array: [
+                    ...state.array.filter(elem=>elem.id !== action.id)
                 ]
             };
         default:
