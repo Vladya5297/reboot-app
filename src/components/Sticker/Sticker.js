@@ -25,7 +25,8 @@ const Sticker = (props) => {
         <div ref={drag}
         style={{
             opacity: isDragging ? 0 : 1,
-            cursor: 'grab'
+            cursor: 'grab',
+            backgroundColor: props.color,
         }}
         className={style.wrapper}>
 

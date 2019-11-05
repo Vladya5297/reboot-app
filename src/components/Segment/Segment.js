@@ -12,11 +12,14 @@ const Segment = (props) => {
         }),
         drop: () => ({type: props.type}),
       });
+    
     return (
         <div className={style.wrapper}>
+            {isOver && <div className={style.focused} 
+                style={{boxShadow: "0 0 5px 2px " + props.color}}/>}
+
             <div ref={drop}
             className={style.dropzone}>
-                {isOver && <div className={style.focused} />}
                 {props.stickers.map((elem) => (
                     <Sticker
                     key={elem.id} 
@@ -24,7 +27,8 @@ const Segment = (props) => {
                     content={elem.content}
                     position={props.stickers.length}
                     id={elem.id}
-                    type={elem.type} />
+                    type={elem.type} 
+                    color={props.color}/>
                 ))}
             </div>
         </div>
