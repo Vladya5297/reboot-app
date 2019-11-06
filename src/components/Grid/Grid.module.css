@@ -1,0 +1,7 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /*Если делать center - не останется места на кнопку разворачивания*/
+    justify-content: flex-start;
+    align-items: center;
+}

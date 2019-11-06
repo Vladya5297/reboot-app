@@ -1,9 +1,7 @@
 .wrapper {
-    height: 8vw;
+    height: 6vw;
     width: 8vw;
     background-color: #ffffaf;
     box-shadow: 0px 3px 5px -4px black;
-    cursor: 'grab';
-    /*Убрать, когда сетка будет готова*/
-    margin: 5px;
+    cursor: grab;
 }

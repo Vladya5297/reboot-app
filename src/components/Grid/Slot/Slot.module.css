@@ -1,0 +1,9 @@
+.slot {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9vw;
+    max-height: 17vh;
+    width: 9vw;
+}

@@ -21,19 +21,10 @@
     height: 100%;
     width: 100%;
     z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    /*Поменять, когда сетка будет готова*/
-    justify-content: center;
-    align-items: center;
 }
 
 .title {
     width: 100%;
     position: absolute;
     text-align: center;
-}
-
-.slot {
-    padding: 5px;
 }
