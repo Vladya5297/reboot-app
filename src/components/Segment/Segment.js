@@ -13,6 +13,27 @@ const Segment = (props) => {
         drop: () => ({type: props.type}),
       });
     
+const stickers = props.stickers
+.sort((a, b)=>a.position-b.position)
+.map((elem) => (
+    <Sticker
+    key={elem.id} 
+    header={elem.header}
+    content={elem.content}
+    position={props.stickers.length}
+    id={elem.id}
+    type={elem.type} 
+    color={props.color}/>
+));
+
+const slots = [];
+for (let i = 0; i < props.slots; i++)
+{
+    slots.push(<div key={i} className={style.slot}>
+        {stickers[i]}
+    </div>);
+}
+
     return (
         <div className={style.wrapper}>
             <div className={style.title}
@@ -25,16 +46,7 @@ const Segment = (props) => {
 
             <div ref={drop}
             className={style.dropzone}>
-                {props.stickers.map((elem) => (
-                    <Sticker
-                    key={elem.id} 
-                    header={elem.header}
-                    content={elem.content}
-                    position={props.stickers.length}
-                    id={elem.id}
-                    type={elem.type} 
-                    color={props.color}/>
-                ))}
+                {stickers.slice(0, props.slots)}
             </div>
         </div>
     )
