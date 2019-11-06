@@ -6,8 +6,7 @@ const WorkArea = (props) => {
     // остальные - в нижний
     return (
         <div className={style.wrapper}>
-            <div className={style.top}>{props.children.slice(0, 2)}</div>
-            <div className={style.bottom}>{props.children.slice(2)}</div>
+            {props.children}
             <div className={style.icon} style={{backgroundImage: "url("+props.icon+")"}}></div>
         </div>
     )

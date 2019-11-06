@@ -25,14 +25,6 @@
 .title {
     font-family: "Arial";
     color: #707070;
-    margin-bottom: 3vh;
+    margin-bottom: 6vh;
     font-size: 3.5vh;
-}
-
-/* контейнер для сегмента и его заголовка */
-.segment-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }

@@ -38,30 +38,27 @@ const MainAreaContainer = (props) => {
   ]
 
   let positions = [
-    {id: 1, top: true},
-    {id: 2, top: true},
-    {id: 3, top: false},
-    {id: 4, top: true},
-    {id: 5, top: true},
-    {id: 6, top: false},
-    {id: 7, top: false},
+    {id: 1, isOnTop: true},
+    {id: 2, isOnTop: true},
+    {id: 3, isOnTop: false},
+    {id: 4, isOnTop: true},
+    {id: 5, isOnTop: true},
+    {id: 6, isOnTop: false},
+    {id: 7, isOnTop: false},
   ];
 
   let childComponents = positions.map((elem, ind)=>{
-    let header = <SegmentHeader
-    key = {segmentTitles[ind].title}
-    title = {segmentTitles[ind].title}
-    helpText = {segmentTitles[ind].helpText} 
-    />
-    let content = <Segment 
-    key={segments[ind].type}
-    type={segments[ind].type}
-    color={segments[ind].color}
-    />
-
-    return (<div key={elem.id} className={style["segment-wrapper"]}>
-        {elem.top ? [header, content] : [content, header]}
-    </div>)
+      return (<Segment 
+      key={segments[ind].type}
+      type={segments[ind].type}
+      color={segments[ind].color}
+      isOnTop={elem.isOnTop}>
+        <SegmentHeader
+          key = {segmentTitles[ind].title}
+          title = {segmentTitles[ind].title}
+          helpText = {segmentTitles[ind].helpText} 
+        />
+      </Segment>)
 });
 
   // прокидывание полученного в основной компонент

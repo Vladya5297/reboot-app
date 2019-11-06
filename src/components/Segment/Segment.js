@@ -15,6 +15,11 @@ const Segment = (props) => {
     
     return (
         <div className={style.wrapper}>
+            <div className={style.title}
+                style={{top: props.isOnTop ? "-1.4em" : "auto",
+                bottom: props.isOnTop ? "auto" : "-1.4em"}}>
+                {props.children}
+            </div>
             {isOver && <div className={style.focused} 
                 style={{boxShadow: "0 0 5px 2px " + props.color}}/>}
 
