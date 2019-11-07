@@ -11,10 +11,18 @@ const Slot = (props) => {
         drop: () => ({type: "Slot", position: props.position}),
     });
     
+    // создаём переменную-флаг, чтобы проверять момент вхождения в область
+    let [dragEnter, setDragEnter] = React.useState(false);
+    if (isOver && !dragEnter) {
+        setDragEnter(true);
+        props.changeStickerPosition(props.id, props.position);
+    } else if (!isOver && dragEnter) {
+        setDragEnter(false);
+    }
+
     return (
         <div ref={drop}
-        className={style.slot}
-        style={{boxShadow: isOver && "0 0 5px 2px black"}}>
+        className={style.slot}>
             {props.children}
         </div>
     );

@@ -4,14 +4,14 @@ import * as style from './Sticker.module.css'
 
 const Sticker = (props) => {
     const [{isDragging}, drag] = useDrag({
-        item: {type: props.type, id: props.id},
+        item: {id: props.id, type: props.type},
         begin: () => {
-            props.showDeleteZone();
-            props.addTransparentSticker(props.type);
+            props.startStickerDragging(props.id, props.type);
+            // props.addTransparentSticker(props.type);
         },
         end: (item, monitor) => {
-            props.hideDeleteZone();
-            props.deleteTransparentSticker();
+            props.stopStickerDragging();
+            // props.deleteTransparentSticker();
             const dropResult = monitor.getDropResult();
             if (dropResult && dropResult.type === "DeleteStickerZone") {
               props.deleteSticker(props.id);
@@ -32,13 +32,11 @@ const Sticker = (props) => {
     return (
         <div ref={drag}
         style={{
-            opacity: isDragging ? 0 : 1,
             backgroundColor: props.color,
-            visibility: props.transparent ? "hidden" : "visible",
-            // backgroundColor: props.transparent ? "green" : props.color
+            opacity: props.id === props.stickerDraggingId ? 0 : 1
         }}
         className={style.wrapper}>
-
+            {props.header}
         </div>
     )
 }

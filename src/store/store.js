@@ -2,10 +2,10 @@
 редьюсер и дописываем в combineReducers*/
 import { createStore, combineReducers } from 'redux'
 import stickers from './stickers'
-import deleteZone from './deleteZone'
+import stickerDragging from './stickerDragging'
 
 export default createStore(combineReducers({
     stickers,
-    deleteZone,
+    stickerDragging,
 }),
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

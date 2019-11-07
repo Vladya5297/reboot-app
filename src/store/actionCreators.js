@@ -1,11 +1,11 @@
 import {ADD_STICKER,
-    SHOW_DELETE_ZONE,
-    HIDE_DELETE_ZONE,
     DELETE_STICKER,
     CHANGE_STICKER_TYPE,
     CHANGE_STICKER_POSITION,
     ADD_TRANSPARENT_STICKER,
     DELETE_TRANSPARENT_STICKER,
+    START_STICKER_DRAGGING,
+    STOP_STICKER_DRAGGING,
 } from './actionTypes'
 
 export function addSticker() {return {type: ADD_STICKER}}
@@ -19,5 +19,5 @@ export function changeStickerPosition(stickerId, position)
 export function addTransparentSticker(stickerType) {return {type: ADD_TRANSPARENT_STICKER, stickerType: stickerType}}
 export function deleteTransparentSticker() {return {type: DELETE_TRANSPARENT_STICKER}}
 
-export function showDeleteZone() {return {type: SHOW_DELETE_ZONE}}
-export function hideDeleteZone() {return {type: HIDE_DELETE_ZONE}}
+export function startStickerDragging(id, stickerType) {return {type: START_STICKER_DRAGGING, id, stickerType}}
+export function stopStickerDragging() {return {type: STOP_STICKER_DRAGGING}}

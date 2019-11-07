@@ -6,7 +6,7 @@ const Grid = (props) => {
     const slots = [];
     for (let i = 0; i < props.slots; i++) {
         slots.push(
-        <Slot key={i} type={props.type} position={i}>
+        <Slot key={i} type={props.type} position={i} isActive={props.isActive}>
             {props.children[i]}
         </Slot>)
     }

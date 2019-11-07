@@ -72,7 +72,7 @@ export default (state = initialState, action) => {
             }
         case ADD_TRANSPARENT_STICKER:
             {
-                const newPosition = state.array.filter((elem) => elem.type === action.newType).length;
+                const newPosition = state.array.filter((elem) => elem.type === action.stickerType).length;
                 const sticker = {
                     position: newPosition,
                     id: -1,
@@ -98,24 +98,29 @@ export default (state = initialState, action) => {
             }
         case CHANGE_STICKER_POSITION:
             {
-                const stickerType = state.array.filter((elem) => elem.id === action.id)[0].type;
-                let sameTypeArr = state.array.filter((elem) => elem.type === stickerType);
+                // в каком сегменте
+                const sticker = state.array.filter((elem) => elem.id === action.id)[0];
+                // проверяем, в какую сторону двигают стикер
+                const moveRight = !!(sticker.position < action.position);
+                // все элементы сегмента
+                let sameTypeArr = state.array.filter((elem) => elem.type === sticker.type);
+                // создаём окно для пустого стикера
                 sameTypeArr = sameTypeArr.map((elem) => {
-                    if (elem.position >= action.position) {
-                        elem.position += 1;
+                    if (elem.id === action.id) {
+                        elem.position = moveRight ? action.position + 0.5 : action.position - 0.5;
                     }
                     return elem;
-                });
+                })
+                    .sort((a, b) => a.position - b.position)
+                    .map((elem, ind) => {
+                        elem.position = ind;
+                        return elem;
+                    });
                 return {
                     ...state,
                     array: [
-                        ...sameTypeArr.map((elem) => {
-                            if (elem.id === action.id) {
-                                elem.position = (action.position >= sameTypeArr.length)
-                                 ? sameTypeArr.length - 1 : action.position;
-                            }
-                            return elem;
-                        })
+                        ...state.array.filter((elem) => elem.type !== sticker.type),
+                        ...sameTypeArr
                     ]
                 }
             }

@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import DeleteStickerZone from './DeleteStickerZone'
 
 const mapStateToProps = (state) => ({
-    isHidden: state.deleteZone.isHidden
+    isVisible: state.stickerDragging.isActive
 });
 
 export default connect(

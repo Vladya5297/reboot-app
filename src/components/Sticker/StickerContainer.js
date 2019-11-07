@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { showDeleteZone, 
-    hideDeleteZone, 
+import { startStickerDragging, 
+    stopStickerDragging, 
     deleteSticker,
     changeStickerType,
     addTransparentSticker,
@@ -8,9 +8,13 @@ import { showDeleteZone,
 } from '../../store/actionCreators'
 import Sticker from './Sticker'
 
+const mapStateToProps = (state) => ({
+    stickerDraggingId: state.stickerDragging.id
+});
+
 const mapDispatchToProps = (dispatch) => ({
-    showDeleteZone: () => dispatch(showDeleteZone()),
-    hideDeleteZone: () => dispatch(hideDeleteZone()),
+    startStickerDragging: (id, stickerType) => dispatch(startStickerDragging(id, stickerType)),
+    stopStickerDragging: () => dispatch(stopStickerDragging()),
     deleteSticker: (id) => dispatch(deleteSticker(id)),
     changeStickerType: (id, type) => dispatch(changeStickerType(id, type)),
     addTransparentSticker: (stickerType) => dispatch(addTransparentSticker(stickerType)),
@@ -18,6 +22,6 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(Sticker);
