@@ -4,6 +4,7 @@ import Sticker from '../Sticker/StickerContainer'
 import * as types from '../../store/itemTypes'
 import * as style from './Segment.module.css'
 import Grid from '../Grid/Grid';
+import openWideIcon from '../../icons/iconsSVG/OpenWideIcon.svg'
 
 const Segment = (props) => {
     // Собираем все имеющиеся типы стикеров
@@ -38,6 +39,7 @@ const stickers = props.stickers
 // При наведении выводим рамку с цветом сегмента
 // Сам стикер помещается в dropzone, чтобы не было бага с иконкой
 // Внутри dropzone делаем сетку с указанным числом слотов
+// Выводим кнопку "раскрыть на весь экран", если стикеров больше, чем слотов
     return (
         <div className={style.wrapper}>
             <div className={style.title}
@@ -55,6 +57,16 @@ const stickers = props.stickers
                     {stickers}
                 </Grid>
             </div>
+            {stickers.length > props.slots && <div style={{
+                height: "1rem",
+                width: "1rem",
+                position: "absolute",
+                right: "2px",
+                top: "2px",
+                backgroundImage: "url(" + openWideIcon + ")",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+            }}/>}
         </div>
     )
 }

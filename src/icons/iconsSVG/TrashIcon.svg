@@ -1,52 +1,12 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="64px" height="64px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-<g>
-	<g>
-		<g id="circle_63_">
-			<g>
-				<path d="M32,0C14.327,0,0,14.327,0,32s14.327,32,32,32s32-14.327,32-32S49.673,0,32,0z M32,62C15.432,62,2,48.568,2,32
-					C2,15.432,15.432,2,32,2c16.568,0,30,13.432,30,30C62,48.568,48.568,62,32,62z"/>
-			</g>
-		</g>
-		<g id="Rectangle_2_copy">
-			<g>
-				<path d="M37,24v-2c0-1.104-0.896-2-2-2h-6c-1.104,0-2,0.896-2,2v2h-5v2h2v16c0,1.104,0.896,2,2,2h12c1.104,0,2-0.896,2-2V26h2
-					v-2H37z M29,22h6v2h-6V22z M38,42H26V26h12V42z M31,28h-2v12h2V28z M35,28h-2v12h2V28z"/>
-			</g>
-		</g>
-	</g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
+<svg id="TrashIcon" xmlns="http://www.w3.org/2000/svg" width="122" height="122" viewBox="0 0 122 122">
+  <g id="icons8-trash_1_" data-name="icons8-trash (1)" transform="translate(36 33.284)">
+    <path id="Path_655" data-name="Path 655" d="M6,4H37.119V48.085H6Z" transform="translate(3.186 3.186)" fill="none"/>
+    <path id="Path_656" data-name="Path 656" d="M22.152,41.9H16.966V13.373h5.186Zm10.373,0H27.339V13.373h5.186ZM4,3H45.491V8.186H4Z" transform="translate(0 1.593)" fill="#909090"/>
+    <path id="Path_657" data-name="Path 657" d="M32.932,9.78,25.152,2H14.78L7,9.78Z" transform="translate(4.78)" fill="#909090"/>
+    <path id="Path_658" data-name="Path 658" d="M36.119,52.271H10.186A5.2,5.2,0,0,1,5,47.085V3H41.3V47.085A5.2,5.2,0,0,1,36.119,52.271ZM10.186,8.186v38.9H36.119V8.186Z" transform="translate(1.593 1.593)" fill="#909090"/>
+  </g>
+  <g id="Ellipse_15" data-name="Ellipse 15" fill="none" stroke="#909090" stroke-width="6">
+    <circle cx="61" cy="61" r="61" stroke="none"/>
+    <circle cx="61" cy="61" r="58" fill="none"/>
+  </g>
 </svg>

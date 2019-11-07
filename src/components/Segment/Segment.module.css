@@ -1,8 +1,8 @@
 .wrapper {
     position: relative;
-    height: 20vw;
+    height: 18vw;
     max-height: 35vh;
-    width: 20vw;
+    width: 18vw;
     flex-grow: 1;
     border: solid 3px #E4E4E4;
     box-sizing: border-box;
@@ -25,6 +25,6 @@
 
 .title {
     width: 100%;
-    position: absolute;
+  
     text-align: center;
 }

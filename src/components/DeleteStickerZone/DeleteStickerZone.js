@@ -2,6 +2,7 @@ import React from 'react'
 import {useDrop} from 'react-dnd'
 import * as types from '../../store/itemTypes'
 import * as style from './DeleteStickerZone.module.css'
+import trashIcon from '../../icons/iconsSVG/TrashIcon.svg'
 
 const DeleteStickerZone = (props) => {
     // массив, хранящий все типы, потому что удалить можно каждый стикер
@@ -18,7 +19,8 @@ const DeleteStickerZone = (props) => {
       });
     return (
     <div ref={drop}
-        style={{display: props.isHidden ? "none" : "block"}} 
+        style={{display: props.isHidden ? "none" : "block",
+        backgroundImage: "url(" + trashIcon + ")"}} 
         className={style.wrapper}></div>
     );
 }

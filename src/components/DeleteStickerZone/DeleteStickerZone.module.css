@@ -1,8 +1,9 @@
 .wrapper {
     position: absolute;
-    bottom: 5vh;
-    height: 100px;
-    width: 100px;
-    background-color: red;
+    bottom: 7vh;
+    height: 7vw;
+    width: 7vw;
     z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
 }

@@ -3,7 +3,7 @@
 делаем относительное позиционирование,
 чтобы разместить иконку по центру*/
 .wrapper {
-    width: 40vw;
+    width: 36vw;
     display: flex;
     flex-wrap: wrap;
     position: relative;
