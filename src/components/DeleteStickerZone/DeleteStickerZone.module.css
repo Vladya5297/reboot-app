@@ -6,4 +6,6 @@
     z-index: 2;
     background-size: contain;
     background-repeat: no-repeat;
+    border-radius: 50%;
+    opacity: 0.7;
 }

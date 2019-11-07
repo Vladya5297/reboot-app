@@ -4,7 +4,6 @@ import Sticker from '../Sticker/StickerContainer'
 import * as types from '../../store/itemTypes'
 import * as style from './Segment.module.css'
 import Grid from '../Grid/Grid';
-import openWideIcon from '../../icons/iconsSVG/OpenWideIcon.svg'
 
 const Segment = (props) => {
     // Собираем все имеющиеся типы стикеров
@@ -35,6 +34,11 @@ const stickers = props.stickers
     type={elem.type} 
     color={props.color}/>
 ));
+
+const title = <div className={style.title}>
+{props.children}
+{stickers.length > props.slots && <div className={style.openWide}/>}
+</div>
 // Заголовок позиционируем с помощью отрицательных отступов
 // При наведении выводим рамку с цветом сегмента
 // Сам стикер помещается в dropzone, чтобы не было бага с иконкой
@@ -42,31 +46,18 @@ const stickers = props.stickers
 // Выводим кнопку "раскрыть на весь экран", если стикеров больше, чем слотов
     return (
         <div className={style.wrapper}>
-            <div className={style.title}
-                style={{top: props.isOnTop ? "-1.4em" : "auto",
-                bottom: props.isOnTop ? "auto" : "-1.4em"}}>
-                {props.children}
-            </div>
             {isOver && <div 
                 className={style.focused} 
                 style={{boxShadow: "0 0 5px 2px " + props.color}}
             />}
             <div ref={drop}
             className={style.dropzone}>
+                {props.isOnTop && title}
                 <Grid type={props.type} slots={props.slots}>
                     {stickers}
                 </Grid>
+                {!props.isOnTop && title}
             </div>
-            {stickers.length > props.slots && <div style={{
-                height: "1rem",
-                width: "1rem",
-                position: "absolute",
-                right: "2px",
-                top: "2px",
-                backgroundImage: "url(" + openWideIcon + ")",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-            }}/>}
         </div>
     )
 }
