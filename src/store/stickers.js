@@ -10,8 +10,6 @@ import {
     ADD_STICKER,
     DELETE_STICKER,
     CHANGE_STICKER_TYPE,
-    ADD_TRANSPARENT_STICKER,
-    DELETE_TRANSPARENT_STICKER,
     CHANGE_STICKER_POSITION,
 } from './actionTypes'
 
@@ -34,7 +32,6 @@ export default (state = initialState, action) => {
                     position: 0,
                     id: state.currentId + 1,
                     type: newSticker,
-                    transparent: false
                 }
                 return {
                     ...state,
@@ -67,32 +64,6 @@ export default (state = initialState, action) => {
                             }
                             return elem;
                         })
-                    ]
-                }
-            }
-        case ADD_TRANSPARENT_STICKER:
-            {
-                const newPosition = state.array.filter((elem) => elem.type === action.stickerType).length;
-                const sticker = {
-                    position: newPosition,
-                    id: -1,
-                    type: action.stickerType,
-                    transparent: true
-                }
-                return {
-                    ...state,
-                    array: [
-                        ...state.array,
-                        sticker
-                    ]
-                }
-            }
-        case DELETE_TRANSPARENT_STICKER:
-            {
-                return {
-                    ...state,
-                    array: [
-                        ...state.array.filter(elem => elem.id !== -1)
                     ]
                 }
             }

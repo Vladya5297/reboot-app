@@ -7,11 +7,9 @@ const Sticker = (props) => {
         item: {id: props.id, type: props.type},
         begin: () => {
             props.startStickerDragging(props.id, props.type);
-            // props.addTransparentSticker(props.type);
         },
         end: (item, monitor) => {
             props.stopStickerDragging();
-            // props.deleteTransparentSticker();
             const dropResult = monitor.getDropResult();
             if (dropResult && dropResult.type === "DeleteStickerZone") {
               props.deleteSticker(props.id);
@@ -33,7 +31,7 @@ const Sticker = (props) => {
         <div ref={drag}
         style={{
             backgroundColor: props.color,
-            opacity: props.id === props.stickerDraggingId ? 0 : 1
+            opacity: props.id === props.stickerDraggingId ? 0.01 : 1
         }}
         className={style.wrapper}>
             {props.header}

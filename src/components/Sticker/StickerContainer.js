@@ -3,8 +3,6 @@ import { startStickerDragging,
     stopStickerDragging, 
     deleteSticker,
     changeStickerType,
-    addTransparentSticker,
-    deleteTransparentSticker
 } from '../../store/actionCreators'
 import Sticker from './Sticker'
 
@@ -17,8 +15,6 @@ const mapDispatchToProps = (dispatch) => ({
     stopStickerDragging: () => dispatch(stopStickerDragging()),
     deleteSticker: (id) => dispatch(deleteSticker(id)),
     changeStickerType: (id, type) => dispatch(changeStickerType(id, type)),
-    addTransparentSticker: (stickerType) => dispatch(addTransparentSticker(stickerType)),
-    deleteTransparentSticker: () => dispatch(deleteTransparentSticker())
 })
 
 export default connect(
