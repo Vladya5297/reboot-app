@@ -1,5 +1,5 @@
 import React from 'react'
-import Slot from './Slot/Slot'
+import Slot from './Slot/SlotContainer'
 import * as style from './Grid.module.css'
 
 const Grid = (props) => {

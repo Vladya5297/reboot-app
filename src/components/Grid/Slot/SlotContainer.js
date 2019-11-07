@@ -1,0 +1,12 @@
+import {connect} from 'react-redux'
+import {changeStickerPosition} from '../../../store/actionCreators'
+import Slot from './Slot'
+
+const mapDispatchToProps = (dispatch) => ({
+    changeStickerPosition: (id, position)=>{dispatch(changeStickerPosition(id, position))}
+})
+
+export default connect(
+    null,
+    mapDispatchToProps
+    )(Slot);

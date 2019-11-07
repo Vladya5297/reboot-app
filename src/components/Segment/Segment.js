@@ -32,6 +32,7 @@ const stickers = props.stickers
     position={props.stickers.length}
     id={elem.id}
     type={elem.type} 
+    transparent={elem.transparent}
     color={props.color}/>
 ));
 

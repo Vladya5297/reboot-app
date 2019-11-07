@@ -8,8 +8,9 @@ const Slot = (props) => {
         collect: monitor => ({
             isOver: !!monitor.isOver(),
         }),
-        drop: () => ({position: props.position}),
+        drop: () => ({type: "Slot", position: props.position}),
     });
+    
     return (
         <div ref={drop}
         className={style.slot}
