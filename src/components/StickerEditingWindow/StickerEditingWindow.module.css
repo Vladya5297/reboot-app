@@ -1,0 +1,81 @@
+.wrapper {
+    width: 20vw;
+    height: 26vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: #E4E4E4;
+    z-index: 4;
+  }
+
+  .blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+  .title {
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-family: "Arial";
+    color: #707070;
+  }
+  
+  .body textarea {
+    width: 100%;
+    border: 0;
+    padding: 8px;
+    overflow: auto;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  
+  .body textarea::placeholder {
+    font-family: "Arial";
+  }
+
+  .stickerTittle {
+    height: 6vw;
+  }
+  
+  .stickerDescription {
+    height: 12vw;
+  }
+  
+  .footer {
+    height: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .cancel {
+    width: 7vw;
+    height: 2vw;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    background: grey;
+    color: white;
+  }
+  
+  .accept {
+    width: 7vw;
+    height: 2vw;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+    color: grey;
+  }
+  

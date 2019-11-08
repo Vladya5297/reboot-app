@@ -6,5 +6,5 @@ export default {
     solutions: {color: "#52E5BA", title: "Решения", helptext: "", slots: 4},
     tasks: {color: "#72ACFF", title: "Задачи", helptext: "", slots: 4},
     problems: {color: "#FFC96C", title: "Проблемы", helptext: "", slots: 4},
-    newSticker: {color: "#ffffaf", title: "", helptext: "", slots: 4}
+    newSticker: {color: "#ffffaf", title: "Новый стикер", helptext: "", slots: 4}
 }

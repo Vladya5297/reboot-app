@@ -27,7 +27,7 @@ export default (state = initialState, action) => {
         case ADD_STICKER:
             {
                 const sticker = {
-                    header: "Перетащи меня",
+                    header: "",
                     content: "",
                     position: 0,
                     id: state.currentId + 1,

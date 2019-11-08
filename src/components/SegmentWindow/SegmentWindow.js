@@ -21,11 +21,14 @@ const SegmentWindow = (props) => {
     // создаём объект заголовка 
     const title = <div className={style.title}>
         {props.type && typeProperties[props.type].title}
-        <div className={style.closeIcon} onClick={props.closeWindow}/>
+        <div className={style.closeIcon} onClick={props.closeWindow} />
     </div>
     return (
         <>
-            {props.isActive && <div className={style.blur} onClick={props.closeWindow}>
+            {props.isActive && <div className={style.blur} onClick={(event) => {
+                event.stopPropagation();
+                props.closeWindow()
+            }}>
                 <div className={style.wrapper} onClick={(event) => { event.stopPropagation() }}>
                     {title}
                     <div className={style.gridWrapper}>

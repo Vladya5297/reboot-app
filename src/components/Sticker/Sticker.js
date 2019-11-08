@@ -34,6 +34,7 @@ const Sticker = (props) => {
             opacity: props.id === props.stickerDraggingId ? 0.01 : 1
         }}
         className={`${style.wrapper} ${style.stickerFonts}`}
+        onClick={() => {props.openStickerEditingWindow(props.id, props.type)}}
         >
             {props.header}
         </div>
