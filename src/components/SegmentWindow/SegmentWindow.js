@@ -21,15 +21,20 @@ const SegmentWindow = (props) => {
     // создаём объект заголовка 
     const title = <div className={style.title}>
         {props.type && typeProperties[props.type].title}
+        <div className={style.closeIcon} onClick={props.closeWindow}/>
     </div>
     return (
         <>
             {props.isActive && <div className={style.blur} onClick={props.closeWindow}>
-                <div className={style.wrapper}>
+                <div className={style.wrapper} onClick={(event) => { event.stopPropagation() }}>
                     {title}
-                    <Grid type={props.type} slots={slots}>
-                        {stickers}
-                    </Grid>
+                    <div className={style.gridWrapper}>
+                        <div className={style.mainStickers}
+                            style={{ height: (typeProperties[props.type].slots / 4) * 8 + 'vw' }} />
+                        <Grid type={props.type} slots={slots}>
+                            {stickers}
+                        </Grid>
+                    </div>
                 </div>
             </div>}
         </>
