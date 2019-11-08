@@ -40,7 +40,7 @@ const Segment = (props) => {
     // создаём объект заголовка с кнопкой расширения сегмента
     const title = <div className={style.title}>
         {props.children}
-        {stickers.length > props.slots && openWideButton}
+        {stickers.length > typeProperties[props.type].slots && openWideButton}
     </div>
     // Заголовок позиционируем с помощью отрицательных отступов
     // При наведении выводим рамку с цветом сегмента
@@ -55,7 +55,7 @@ const Segment = (props) => {
             <div ref={drop}
                 className={style.dropzone}>
                 {props.isOnTop && title}
-                <Grid type={props.type} slots={props.slots}>
+                <Grid type={props.type} slots={typeProperties[props.type].slots}>
                     {stickers}
                 </Grid>
                 {!props.isOnTop && title}

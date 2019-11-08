@@ -8,20 +8,19 @@ import MainArea from './MainArea';
 // Вынос логики из презентационного компонента - стандартная практика
 const MainAreaContainer = (props) => {
   let segments = [
-    {id: 1, isOnTop: true, type: types.benefits, slots: 4},
-    {id: 2, isOnTop: true, type: types.advantages, slots: 4},
-    {id: 3, isOnTop: false, type: types.problemSolvings, slots: 8},
-    {id: 4, isOnTop: true, type: types.desires, slots: 4},
-    {id: 5, isOnTop: true, type: types.solutions, slots: 4},
-    {id: 6, isOnTop: false, type: types.tasks, slots: 4},
-    {id: 7, isOnTop: false, type: types.problems, slots: 4},
+    {id: 1, isOnTop: true, type: types.benefits},
+    {id: 2, isOnTop: true, type: types.advantages},
+    {id: 3, isOnTop: false, type: types.problemSolvings},
+    {id: 4, isOnTop: true, type: types.desires},
+    {id: 5, isOnTop: true, type: types.solutions},
+    {id: 6, isOnTop: false, type: types.tasks},
+    {id: 7, isOnTop: false, type: types.problems},
   ]
 
   let childComponents = segments.map((elem, ind)=>{
       return (<Segment 
       key={elem.type}
       type={elem.type}
-      slots={elem.slots}
       isOnTop={elem.isOnTop}>
         <SegmentHeader
           key={elem.id}

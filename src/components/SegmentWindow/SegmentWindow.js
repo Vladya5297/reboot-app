@@ -2,6 +2,7 @@ import React from 'react'
 import Grid from '../Grid/Grid'
 import Sticker from '../Sticker/StickerContainer'
 import * as style from './SegmentWindow.module.css'
+import typeProperties from '../../store/typeProperties'
 
 const SegmentWindow = (props) => {
     const stickers = props.stickers
@@ -15,13 +16,20 @@ const SegmentWindow = (props) => {
                 id={elem.id}
                 type={elem.type} />
         ));
+    // количество слотов должно быть кратно четырём
+    const slots = stickers.length + (4 - stickers.length % 4);
+    // создаём объект заголовка 
+    const title = <div className={style.title}>
+        {props.type && typeProperties[props.type].title}
+    </div>
     return (
         <>
             {props.isActive && <div className={style.blur} onClick={props.closeWindow}>
                 <div className={style.wrapper}>
-                    {props.isActive && <Grid type={props.type} slots={props.stickers.length}>
+                    {title}
+                    <Grid type={props.type} slots={slots}>
                         {stickers}
-                    </Grid>}
+                    </Grid>
                 </div>
             </div>}
         </>

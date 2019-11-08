@@ -8,8 +8,9 @@
     left: 0;
     margin: auto;
     background-color: white;
-    padding: 20px;
+    padding: 0 15px 15px 15px;
     z-index: 3;
+    overflow-y: scroll;
 }
 
 .blur {
@@ -18,4 +19,13 @@
     position: absolute;
     z-index: 3;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    font-family: "Arial";
+    color: #707070;
+    padding: 5px 0;
 }

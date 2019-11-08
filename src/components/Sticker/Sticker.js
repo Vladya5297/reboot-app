@@ -15,6 +15,9 @@ const Sticker = (props) => {
             if (dropResult && dropResult.type === "DeleteStickerZone") {
               props.deleteSticker(props.id);
             }
+            else if (dropResult && dropResult.type === "Slot") {
+                
+            }
             else if (dropResult) {
                 props.changeStickerType(props.id, dropResult.type)
             }

@@ -1,6 +1,5 @@
 .wrapper {
     --text-color: #707070;
-    --hover-color: #9E9E9E;
     padding: 5px;
     color: var(--text-color);
     user-select: none;
@@ -12,7 +11,7 @@
 }
 
 .wrapper:hover {
-    color: var(--hover-color);
+    opacity: 0.5;
 }
 
 .icon {
