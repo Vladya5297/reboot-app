@@ -5,13 +5,13 @@ action могут быть любыми. Важно: редьюсер долже
 возвращать именно новый объект. Чтобы добавить новый
 функционал, пишем в новом файле новую функцию-редьюсер
 и дописываем её имя в combineReducers */
-import { newSticker } from './itemTypes'
+import { newSticker } from '../itemTypes'
 import {
     ADD_STICKER,
     DELETE_STICKER,
     CHANGE_STICKER_TYPE,
     CHANGE_STICKER_POSITION,
-} from './actionTypes'
+} from '../actionTypes'
 
 
 /* Всегда параметром по умалчанию прокидываем начальное состояние,

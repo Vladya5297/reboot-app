@@ -1,7 +1,7 @@
 import {
     START_STICKER_DRAGGING,
     STOP_STICKER_DRAGGING
-} from './actionTypes'
+} from '../actionTypes'
 
 const initialState = {
     isActive: false,

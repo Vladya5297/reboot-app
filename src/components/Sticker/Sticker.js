@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDrag } from 'react-dnd'
 import * as style from './Sticker.module.css'
+import color from '../../store/segmentColors'
 
 const Sticker = (props) => {
     const [{isDragging}, drag] = useDrag({
@@ -30,7 +31,7 @@ const Sticker = (props) => {
     return (
         <div ref={drag}
         style={{
-            backgroundColor: props.color,
+            backgroundColor: color[props.type],
             opacity: props.id === props.stickerDraggingId ? 0.01 : 1
         }}
         className={`${style.wrapper} ${style.stickerFonts}`}

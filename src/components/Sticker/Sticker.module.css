@@ -12,6 +12,7 @@
 }
 
 .stickerFonts {
+    font-size: 2vh;
     font-weight: bold;
     color: #444444;
     overflow-wrap: break-word; 

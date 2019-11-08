@@ -1,0 +1,21 @@
+.wrapper {
+    position: absolute;
+    height: 35vw;
+    width: 35vw;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    z-index: 3;
+}
+
+.blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+}

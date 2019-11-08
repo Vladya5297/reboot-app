@@ -4,6 +4,8 @@ import {ADD_STICKER,
     CHANGE_STICKER_POSITION,
     START_STICKER_DRAGGING,
     STOP_STICKER_DRAGGING,
+    MAXIMIZE_SEGMENT,
+    MINIMIZE_SEGMENT,
 } from './actionTypes'
 
 export function addSticker() {return {type: ADD_STICKER}}
@@ -17,3 +19,6 @@ export function changeStickerPosition(stickerId, position)
 
 export function startStickerDragging(id, stickerType) {return {type: START_STICKER_DRAGGING, id, stickerType}}
 export function stopStickerDragging() {return {type: STOP_STICKER_DRAGGING}}
+
+export function maximizeSegment(segmentType) {return {type: MAXIMIZE_SEGMENT, segmentType}}
+export function minimizeSegment() {return {type: MINIMIZE_SEGMENT}}

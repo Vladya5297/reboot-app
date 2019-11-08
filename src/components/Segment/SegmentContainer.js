@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { maximizeSegment } from '../../store/actionCreators'
 import Segment from './Segment'
 
 const mapStateToProps = (state, ownProps) => ({
@@ -7,6 +8,11 @@ const mapStateToProps = (state, ownProps) => ({
     })
 });
 
+const mapDispatchToProps = (dispatch) => ({
+    openWide: (segmentType) => dispatch(maximizeSegment(segmentType))
+})
+
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(Segment);

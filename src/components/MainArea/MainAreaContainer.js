@@ -27,13 +27,13 @@ const MainAreaContainer = (props) => {
   // иначе компилятор ругается, что айдишники совпадают с массивом заголовков
   // ДОПОЛНИТЬ НУЖНЫМИ ПОЛЯМИ
   let segments = [
-    {type: types.benefits, color: "#AFFFC7", slots: 4},
-    {type: types.advantages, color: "#FF8BF0", slots: 4},
-    {type: types.problemSolvings, color: "#AFE7FF", slots: 8},
-    {type: types.desires, color: "#FA6980", slots: 4},
-    {type: types.solutions, color: "#52E5BA", slots: 4},
-    {type: types.tasks, color: "#72ACFF", slots: 4},
-    {type: types.problems, color: "#FFC96C", slots: 4},
+    {type: types.benefits, slots: 4},
+    {type: types.advantages, slots: 4},
+    {type: types.problemSolvings, slots: 8},
+    {type: types.desires, slots: 4},
+    {type: types.solutions, slots: 4},
+    {type: types.tasks, slots: 4},
+    {type: types.problems, slots: 4},
   ]
 
   let positions = [
@@ -50,7 +50,6 @@ const MainAreaContainer = (props) => {
       return (<Segment 
       key={segments[ind].type}
       type={segments[ind].type}
-      color={segments[ind].color}
       slots={segments[ind].slots}
       isOnTop={elem.isOnTop}>
         <SegmentHeader

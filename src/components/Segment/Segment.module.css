@@ -7,13 +7,6 @@
     background-color: white;
 }
 
-.focused {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
-}
-
 .dropzone {
     height: 100%;
     width: 100%;
@@ -35,4 +28,5 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../../icons/iconsSVG/OpenWideIcon.svg');
+    cursor: pointer;
 }
