@@ -33,7 +33,8 @@ const Sticker = (props) => {
             backgroundColor: props.color,
             opacity: props.id === props.stickerDraggingId ? 0.01 : 1
         }}
-        className={style.wrapper}>
+        className={`${style.wrapper} ${style.stickerFonts}`}
+        >
             {props.header}
         </div>
     )

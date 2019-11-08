@@ -27,8 +27,8 @@ export default (state = initialState, action) => {
         case ADD_STICKER:
             {
                 const sticker = {
-                    header: "SampleText",
-                    content: "Drag me",
+                    header: "Перетащи меня",
+                    content: "",
                     position: 0,
                     id: state.currentId + 1,
                     type: newSticker,
@@ -59,6 +59,9 @@ export default (state = initialState, action) => {
                     array: [
                         ...state.array.map((elem) => {
                             if (elem.id === action.id) {
+                                if (elem.type === newSticker) {
+                                    elem.header = "";
+                                }
                                 elem.type = action.newType;
                                 elem.position = newPosition;
                             }
@@ -73,16 +76,18 @@ export default (state = initialState, action) => {
                 const sticker = state.array.filter((elem) => elem.id === action.id)[0];
                 // проверяем, в какую сторону двигают стикер
                 const moveRight = !!(sticker.position < action.position);
-                // все элементы сегмента
+                // все стикеры сегмента
                 let sameTypeArr = state.array.filter((elem) => elem.type === sticker.type);
-                // создаём окно для пустого стикера
+                // позиционируем перетаскиваемый стикер
                 sameTypeArr = sameTypeArr.map((elem) => {
                     if (elem.id === action.id) {
                         elem.position = moveRight ? action.position + 0.5 : action.position - 0.5;
                     }
                     return elem;
                 })
+                // сортируем стикеры по позициям
                     .sort((a, b) => a.position - b.position)
+                // меняем значения на целые числа
                     .map((elem, ind) => {
                         elem.position = ind;
                         return elem;
