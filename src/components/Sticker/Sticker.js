@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDrag } from 'react-dnd'
 import * as style from './Sticker.module.css'
-import color from '../../store/segmentColors'
+import typeProperties from '../../store/typeProperties'
 
 const Sticker = (props) => {
     const [{isDragging}, drag] = useDrag({
@@ -15,10 +15,6 @@ const Sticker = (props) => {
             if (dropResult && dropResult.type === "DeleteStickerZone") {
               props.deleteSticker(props.id);
             }
-            else if (dropResult && dropResult.type === "Slot")
-            {
-
-            }
             else if (dropResult) {
                 props.changeStickerType(props.id, dropResult.type)
             }
@@ -31,7 +27,7 @@ const Sticker = (props) => {
     return (
         <div ref={drag}
         style={{
-            backgroundColor: color[props.type],
+            backgroundColor: typeProperties[props.type].color,
             opacity: props.id === props.stickerDraggingId ? 0.01 : 1
         }}
         className={`${style.wrapper} ${style.stickerFonts}`}

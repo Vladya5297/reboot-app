@@ -4,7 +4,7 @@ import Sticker from '../Sticker/StickerContainer'
 import * as types from '../../store/itemTypes'
 import * as style from './Segment.module.css'
 import Grid from '../Grid/Grid';
-import color from '../../store/segmentColors'
+import typeProperties from '../../store/typeProperties'
 
 const Segment = (props) => {
     // Собираем все имеющиеся типы стикеров
@@ -48,11 +48,10 @@ const Segment = (props) => {
     // Внутри dropzone делаем сетку с указанным числом слотов
     // Выводим кнопку "раскрыть на весь экран", если стикеров больше, чем слотов
     return (
-        <div className={style.wrapper} style={{ boxShadow: isOver ? "inset 0 0 2px 2px " + color[props.type] : "none" }}>
-            {/* {isOver && <div
-                className={style.focused}
-                style={{ boxShadow: "0 0 5px 2px " + color[props.type] }}
-            />} */}
+        <div className={style.wrapper} 
+        style={{ boxShadow: 
+        isOver ? "inset 0 0 2px 2px " + typeProperties[props.type].color : "none" 
+        }}>
             <div ref={drop}
                 className={style.dropzone}>
                 {props.isOnTop && title}

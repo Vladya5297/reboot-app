@@ -1,12 +1,13 @@
 import React from 'react';
 import * as style from './SegmentHeader.module.css'
 import HelpIcon from '../HelpIcon/HelpIcon'
+import typeProperties from '../../store/typeProperties'
 
 const SegmentHeader = (props) => {
     return (
         <div className={style.wrapper}>
-            {props.title}
-            <HelpIcon helpText={props.helpText} />
+            {typeProperties[props.type].title}
+            <HelpIcon helpText={typeProperties[props.type].helpText} />
         </div>
     )
 }
