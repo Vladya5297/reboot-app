@@ -1,6 +1,7 @@
 import React from 'react'
 import * as style from './StickerEditingWindow.module.css'
 import typeProperties from '../../store/typeProperties'
+import HelpIcon from '../HelpIcon/HelpIcon'
 
 const StickerEditingWindow = (props) => {
     const [header, setHeader] = React.useState(props.sticker.header);
@@ -11,7 +12,10 @@ const StickerEditingWindow = (props) => {
             props.closeWindow()
         }}>
             <div className={style.wrapper} onClick={(event) => { event.stopPropagation() }}>
-                <div className={style.title}>{typeProperties[props.type].title}</div>
+                <div className={style.title}>
+                    {typeProperties[props.type].title}
+                    <HelpIcon type={props.sticker.type}/>
+                    </div>
                 <div className={style.body}>
                     <textarea className={style.stickerTittle}
                         placeholder="Заголовок стикера..."
