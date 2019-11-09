@@ -11,6 +11,7 @@ import {
     DELETE_STICKER,
     CHANGE_STICKER_TYPE,
     CHANGE_STICKER_POSITION,
+    CHANGE_STICKER_TEXT,
 } from '../actionTypes'
 
 
@@ -59,9 +60,6 @@ export default (state = initialState, action) => {
                     array: [
                         ...state.array.map((elem) => {
                             if (elem.id === action.id) {
-                                if (elem.type === newSticker) {
-                                    elem.header = "";
-                                }
                                 elem.type = action.newType;
                                 elem.position = newPosition;
                             }
@@ -85,9 +83,9 @@ export default (state = initialState, action) => {
                     }
                     return elem;
                 })
-                // сортируем стикеры по позициям
+                    // сортируем стикеры по позициям
                     .sort((a, b) => a.position - b.position)
-                // меняем значения на целые числа
+                    // меняем значения на целые числа
                     .map((elem, ind) => {
                         elem.position = ind;
                         return elem;
@@ -97,6 +95,21 @@ export default (state = initialState, action) => {
                     array: [
                         ...state.array.filter((elem) => elem.type !== sticker.type),
                         ...sameTypeArr
+                    ]
+                }
+            }
+        case CHANGE_STICKER_TEXT:
+            {
+                return {
+                    ...state,
+                    array: [
+                        ...state.array.map((elem) => {
+                            if (elem.id === action.id) {
+                                elem.header = action.header;
+                                elem.content = action.content;
+                            }
+                            return elem;
+                        })
                     ]
                 }
             }

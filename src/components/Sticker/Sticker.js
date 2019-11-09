@@ -4,7 +4,7 @@ import * as style from './Sticker.module.css'
 import typeProperties from '../../store/typeProperties'
 
 const Sticker = (props) => {
-    const [{isDragging}, drag] = useDrag({
+    const [,drag] = useDrag({
         item: {id: props.id, type: props.type},
         begin: () => {
             props.startStickerDragging(props.id, props.type);
@@ -21,10 +21,7 @@ const Sticker = (props) => {
             else if (dropResult) {
                 props.changeStickerType(props.id, dropResult.type)
             }
-        },
-        collect: monitor => ({
-                isDragging: !!monitor.isDragging(),
-        }),
+        }
     });
 
     return (

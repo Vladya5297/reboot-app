@@ -30,7 +30,7 @@ const Segment = (props) => {
                 key={elem.id}
                 header={elem.header}
                 content={elem.content}
-                position={props.stickers.length}
+                position={elem.position}
                 id={elem.id}
                 type={elem.type}/>
         ));

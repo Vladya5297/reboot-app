@@ -2,6 +2,7 @@ import {ADD_STICKER,
     DELETE_STICKER,
     CHANGE_STICKER_TYPE,
     CHANGE_STICKER_POSITION,
+    CHANGE_STICKER_TEXT,
     START_STICKER_DRAGGING,
     STOP_STICKER_DRAGGING,
     MAXIMIZE_SEGMENT,
@@ -12,13 +13,15 @@ import {ADD_STICKER,
 
 
 export function addSticker() {return {type: ADD_STICKER}}
-export function deleteSticker(stickerId) {return {type: DELETE_STICKER, id: stickerId}}
-export function changeStickerType(stickerId, stickerType) 
-{return {type: CHANGE_STICKER_TYPE, id: stickerId, newType: stickerType}
+export function deleteSticker(id) {return {type: DELETE_STICKER, id}}
+export function changeStickerType(id, newType) 
+{return {type: CHANGE_STICKER_TYPE, id, newType}
 }
-export function changeStickerPosition(stickerId, position) 
-{return {type: CHANGE_STICKER_POSITION, id: stickerId, position: position}
+export function changeStickerPosition(id, position) 
+{return {type: CHANGE_STICKER_POSITION, id, position}
 }
+export function changeStickerText(id, header, content)
+{return {type: CHANGE_STICKER_TEXT, id, header, content}}
 
 export function startStickerDragging(id, stickerType) {return {type: START_STICKER_DRAGGING, id, stickerType}}
 export function stopStickerDragging() {return {type: STOP_STICKER_DRAGGING}}

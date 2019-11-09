@@ -24,23 +24,21 @@ const SegmentWindow = (props) => {
         <div className={style.closeIcon} onClick={props.closeWindow} />
     </div>
     return (
-        <>
-            {props.isActive && <div className={style.blur} onClick={(event) => {
-                event.stopPropagation();
-                props.closeWindow()
-            }}>
-                <div className={style.wrapper} onClick={(event) => { event.stopPropagation() }}>
-                    {title}
-                    <div className={style.gridWrapper}>
-                        <div className={style.mainStickers}
-                            style={{ height: (typeProperties[props.type].slots / 4) * 8 + 'vw' }} />
-                        <Grid type={props.type} slots={slots}>
-                            {stickers}
-                        </Grid>
-                    </div>
+        <div className={style.blur} onClick={(event) => {
+            event.stopPropagation();
+            props.closeWindow()
+        }}>
+            <div className={style.wrapper} onClick={(event) => { event.stopPropagation() }}>
+                {title}
+                <div className={style.gridWrapper}>
+                    <div className={style.mainStickers}
+                        style={{ height: (typeProperties[props.type].slots / 4) * 8 + 'vw' }} />
+                    <Grid type={props.type} slots={slots}>
+                        {stickers}
+                    </Grid>
                 </div>
-            </div>}
-        </>
+            </div>
+        </div>
     )
 }
 
