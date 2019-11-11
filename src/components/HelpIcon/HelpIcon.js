@@ -1,6 +1,6 @@
 import React from 'react'
-import questionMarkIcon from '../../icons/iconsSVG/QuestionMarkIcon.svg'
 import * as style from './HelpIcon.module.css'
+import typeProperties from '../../store/typeProperties'
 /**
  * Библиотека для всплывающих продсказок. Там же смотреть гибкие настройки и фичи по дизайну
  * @link https://material-ui.com/ru/components/tooltips/
@@ -8,15 +8,25 @@ import * as style from './HelpIcon.module.css'
  * то смотреть сюда @link https://codesandbox.io/s/3xx46v9015
  */
 import Tooltip from '@material-ui/core/Tooltip'
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const HelpIcon = (props) => {
-    console.log(props.helpText);
+    const theme = createMuiTheme({
+        overrides: {
+            MuiTooltip: {
+                tooltip: {
+                    fontSize: "1rem",
+                    opacity: 1
+                }
+            }
+        }
+    });
     return (
-            <>
-                <Tooltip title={props.helpText}>
-                    <img className={style.icon} src={questionMarkIcon} />
-                 </Tooltip>
-            </>
+        <MuiThemeProvider theme={theme}>
+            <Tooltip title={typeProperties[props.type].helptext}>
+                <div className={style.icon} />
+            </Tooltip>
+        </MuiThemeProvider>
     )
 }
 
