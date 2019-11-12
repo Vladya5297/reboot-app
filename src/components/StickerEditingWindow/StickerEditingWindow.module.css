@@ -43,6 +43,7 @@
   
   .body textarea::placeholder {
     font-family: "Arial";
+    opacity: 0.7;
   }
 
   .stickerTittle {
@@ -77,6 +78,10 @@
     text-align: center;
     cursor: pointer;
     background: white;
-    color: grey;
+    color: #444444;
+    transition: 0.3s;
   }
   
+  .button:hover {
+    box-shadow: 0px 3px 5px -4px black;
+  }

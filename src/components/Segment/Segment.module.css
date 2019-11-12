@@ -23,8 +23,10 @@
     height: 1rem;
     width: 1rem;
     position: absolute;
-    left: 2px;
-    top: 2px;
+    left: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../../icons/iconsSVG/OpenWideIcon.svg');
