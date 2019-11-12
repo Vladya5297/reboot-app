@@ -1,6 +1,6 @@
 .wrapper {
-    width: 20vw;
-    height: 26vw;
+    width: 23vw;
+    height: 28vw;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -20,7 +20,7 @@
 }
   
   .title {
-    height: 2vw;
+    height: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@
   }
   
   .stickerDescription {
-    height: 12vw;
+    height: 13vw;
   }
   
   .footer {

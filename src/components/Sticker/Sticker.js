@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDrag } from 'react-dnd'
 import * as style from './Sticker.module.css'
+import { newSticker } from '../../store/itemTypes'
 import typeProperties from '../../store/typeProperties'
 
 const Sticker = (props) => {
@@ -19,7 +20,10 @@ const Sticker = (props) => {
                 
             }
             else if (dropResult) {
-                props.changeStickerType(props.id, dropResult.type)
+                props.changeStickerType(props.id, dropResult.type);
+                // if (props.type === newSticker) {
+                //     props.openStickerEditingWindow(props.id, props.type);
+                // }
             }
         }
     });

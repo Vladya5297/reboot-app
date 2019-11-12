@@ -38,7 +38,10 @@ const Segment = (props) => {
     // создаём объект - кнопку
     const openWideButton = <div className={style.openWide} onClick={() => props.openWide(props.type)}/>;
     // создаём объект заголовка с кнопкой расширения сегмента
-    const title = <div className={style.title}>
+    const title = <div className={style.title} style={{
+        paddingTop: props.isOnTop ? "5px" : "0",
+        paddingBottom: props.isOnTop ? "0" : "5px"
+    }}>
         {props.children}
         {stickers.length > typeProperties[props.type].slots && openWideButton}
     </div>
