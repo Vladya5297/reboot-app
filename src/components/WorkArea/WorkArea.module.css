@@ -22,7 +22,8 @@
     bottom: 0;
     top: 0;
     margin: auto;
-    border: solid 5px #E4E4E4;
-    width: 10vh;
-    height: 10vh;
+    outline: solid 5px #E4E4E4; 
+    border: solid 5px #ffffff;
+    width: 8vh;
+    height: 8vh;
 }

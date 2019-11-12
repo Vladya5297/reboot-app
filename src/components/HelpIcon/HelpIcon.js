@@ -1,6 +1,7 @@
 import React from 'react'
 import * as style from './HelpIcon.module.css'
 import typeProperties from '../../store/typeProperties'
+import { connect } from 'react-redux'
 /**
  * Библиотека для всплывающих продсказок. Там же смотреть гибкие настройки и фичи по дизайну
  * @link https://material-ui.com/ru/components/tooltips/
@@ -9,6 +10,10 @@ import typeProperties from '../../store/typeProperties'
  */
 import Tooltip from '@material-ui/core/Tooltip'
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+
+const mapStateToProps = (state) => ({
+    isStickerEditingActive: state.stickerEditingWindow.isActive,
+});
 
 const HelpIcon = (props) => {
     const theme = createMuiTheme({
@@ -23,11 +28,16 @@ const HelpIcon = (props) => {
     });
     return (
         <MuiThemeProvider theme={theme}>
-            <Tooltip title={typeProperties[props.type].helptext}>
-                <div className={style.icon} />
-            </Tooltip>
+            {props.isStickerEditingActive ?
+                <Tooltip title={typeProperties[props.type].helptext} placement="right-start">
+                    <div className={style.icon} />
+                </Tooltip> :
+                <Tooltip title={typeProperties[props.type].helptext}>
+                    <div className={style.icon} />
+                </Tooltip>
+            }
         </MuiThemeProvider>
     )
 }
 
-export default HelpIcon;
+export default connect(mapStateToProps)(HelpIcon);
