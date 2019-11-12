@@ -5,4 +5,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 5px;
+    cursor: pointer;
 }
+
+.tooltip {
+    text-align: start;
+    background-color: #2b2b2b;
+    color: #FFF;
+    fill: #FFF;
+  }
