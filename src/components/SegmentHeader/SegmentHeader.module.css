@@ -1,0 +1,6 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    font-family: "Arial";
+    color: #707070;
+}

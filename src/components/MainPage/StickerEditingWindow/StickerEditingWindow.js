@@ -9,26 +9,27 @@ const StickerEditingWindow = (props) => {
     return (
         <div className={style.blur} onClick={(event) => {
             event.stopPropagation();
-            props.closeWindow()
         }}>
             <div className={style.wrapper} onClick={(event) => { event.stopPropagation() }}>
                 <div className={style.title}>
                     {typeProperties[props.type].title}
-                    <HelpIcon type={props.sticker.type}/>
-                    </div>
+                    <HelpIcon type={props.sticker.type} />
+                </div>
                 <div className={style.body}>
-                    <textarea className={style.stickerTittle}
-                        placeholder="Заголовок стикера..."
+                    <textarea maxLength="37"
+                        className={style.stickerTittle}
+                        placeholder="Заголовок стикера, служит для обозначения стикера на экране..."
                         value={header}
                         onChange={(event) => setHeader(event.target.value)} />
-                    <textarea className={style.stickerDescription}
-                        placeholder="Содержание стикера..."
+                    <textarea maxLength="337"
+                        className={style.stickerDescription}
+                        placeholder="Содержание стикера, из которого будет формироваться законченная идея..."
                         value={content}
                         onChange={(event) => setContent(event.target.value)} />
                 </div>
                 <div className={style.footer}>
-                    <div className={style.cancel} onClick={props.closeWindow}>Отмена</div>
-                    <div className={style.accept} onClick={()=>{
+                    <div className={`${style.cancel} ${style.button}`} onClick={props.closeWindow}>Отмена</div>
+                    <div className={`${style.accept} ${style.button}`} onClick={() => {
                         props.closeWindow();
                         props.changeStickerText(props.sticker.id, header, content);
                     }}>Принять</div>
