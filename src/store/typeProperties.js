@@ -1,10 +1,43 @@
+import React from 'react'
+
 export default {
-    benefits: {color: "#AFFFC7", title: "Выгода", helptext: "", slots: 4},
-    advantages: {color: "#FF8BF0", title: "Преимущества", helptext: "", slots: 4},
-    problemSolvings: {color: "#AFE7FF", title: "Как продукт решает проблему", helptext: "", slots: 8},
-    desires: {color: "#FA6980", title: "Желания", helptext: "", slots: 4},
-    solutions: {color: "#52E5BA", title: "Решения", helptext: "", slots: 4},
-    tasks: {color: "#72ACFF", title: "Задачи", helptext: "", slots: 4},
-    problems: {color: "#FFC96C", title: "Проблемы", helptext: "", slots: 4},
-    newSticker: {color: "#ffffaf", title: "Новый стикер", helptext: "", slots: 4}
+    benefits: {color: "#AFFFC7", title: "Выгода", 
+    helptext: <div style={{maxWidth: "30vw"}}>Выгоды, которые приобретает клиент, пользуясь вашим продуктом:
+    <br />-Чем полезен продукт?<br />-Как продукт облегчает жизнь клиента?</div>, slots: 4},
+
+    advantages: {color: "#FF8BF0", title: "Преимущества",
+    helptext: <div style={{maxWidth: "30vw"}}>В чем заключается конкурентное преимущество вашего продукта?
+     В каких метриках он выигрывает у аналогов?</div>, slots: 4},
+
+    problemSolvings: {color: "#AFE7FF", title: "Как продукт решает проблему",
+    helptext: <div style={{maxWidth: "30vw"}}>Опишите то, как именно продукт решает проблему</div>, slots: 8},
+
+    desires: {color: "#FA6980", title: "Желания",
+    helptext: <div style={{maxWidth: "30vw"}}>-Что жизненно важно делать для вашего клиента? Какие шаги он проходит, когда это делает?<br />
+    -Какие функциональные задачи выполняет клиент?<br />
+    -Есть ли задачи, которые клиент решает, сам того не понимая?<br />
+    -Что приносит клиенту чувство удовлетворения?<br />
+    -Как клиент хотел бы улучшить жизнь?</div>, slots: 4},
+
+    solutions: {color: "#52E5BA", title: "Решения",
+    helptext: <div style={{maxWidth: "30vw"}}>Опишите то, как проблема решается сейчас</div>, slots: 4},
+
+    tasks: {color: "#72ACFF", title: "Задачи",
+    helptext: <div style={{maxWidth: "30vw"}}>-Какие бизнес-задачи стоят перед клиентом?<br />
+    -Что наиболее ценно для клиента, с точки зрения денег, времени и усилий?<br />
+    -Какой уровень качества он ожидает получить?<br />
+    -Какие выгоды клиент получает сейчас, когда пользуется тем что имеет?<br />
+    -Как клиент измеряет успех или неудачу? </div>, slots: 4},
+
+    problems: {color: "#FFC96C", title: "Проблемы",
+    helptext: <div style={{maxWidth: "30vw"}}>-Что клиента не устраивает в существующих продуктах? Что раздражает, но не оставляет выбора?<br />
+    -С какими основными сложностями сталкивается клиент?<br /> 
+    -Есть ли задачи, которые клиент выполняет через силу?<br />
+    -Какие ошибки клиент чаще всего допускает?<br />
+    -Основные сложности, которые возникают у клиента?<br />
+    -Какие потери у клиента чаще всего возникают?</div>, slots: 4},
+
+    newSticker: {color: "#ffffaf", title: "Новый стикер", 
+    helptext: <div style={{maxWidth: "30vw"}}>Внесённая в заголовок информация будет отображаться на стикере на основном экране. 
+    Информация из поля "Содержание стикера" будет доступна по клику на стикер</div>, slots: 4}
 }

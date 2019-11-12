@@ -1,0 +1,8 @@
+.helpIcon {
+    height: 1rem;
+    width: 1rem;
+    background-image: url('../../../icons/iconsSVG/QuestionMarkIcon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}

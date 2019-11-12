@@ -1,4 +1,4 @@
- {
+{
   "name": "reboot-app",
   "version": "0.1.0",
   "private": true,
@@ -8,7 +8,9 @@
     "react-dnd-html5-backend": "^9.4.0",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-tooltip-lite": "^1.10.0",
     "redux": "^4.0.4"
   },
   "scripts": {

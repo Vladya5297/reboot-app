@@ -1,0 +1,32 @@
+.wrapper {
+    position: relative;
+    width: 18vw;
+    flex-grow: 1;
+    border: solid 3px #E4E4E4;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.dropzone {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.openWide {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../../icons/iconsSVG/OpenWideIcon.svg');
+    cursor: pointer;
+}
