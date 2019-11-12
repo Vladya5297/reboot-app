@@ -1,11 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD:src/components/MainPage/DeleteStickerZone/DeleteStickerZone.js
-import {useDrop} from 'react-dnd'
-import * as types from '../../../store/itemTypes'
-=======
 import { useDrop } from 'react-dnd'
-import * as types from '../../store/itemTypes'
->>>>>>> 61e4c3bc204ebee7369c9d96729ae6e0e2f8a843:src/components/DeleteStickerZone/DeleteStickerZone.js
+import * as types from '../../../store/itemTypes'
 import * as style from './DeleteStickerZone.module.css'
 import trashIcon from '../../../icons/iconsSVG/TrashIcon.svg'
 
