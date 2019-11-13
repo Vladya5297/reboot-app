@@ -10,12 +10,23 @@ import { connect } from 'react-redux'
  */
 import Tooltip from '@material-ui/core/Tooltip'
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 const mapStateToProps = (state) => ({
     isStickerEditingActive: state.stickerEditingWindow.isActive,
 });
 
 const HelpIcon = (props) => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleTooltipClose = () => {
+        setOpen(false);
+    };
+
+    const handleTooltipOpen = () => {
+        setOpen(true);
+    };
+
     const theme = createMuiTheme({
         overrides: {
             MuiTooltip: {
@@ -30,11 +41,24 @@ const HelpIcon = (props) => {
         <MuiThemeProvider theme={theme}>
             {props.isStickerEditingActive ?
                 <Tooltip title={typeProperties[props.type].helptext} placement="right-start">
-                    <div className={style.icon} />
+                    <div className={style.icon}/>
                 </Tooltip> :
-                <Tooltip title={typeProperties[props.type].helptext}>
-                    <div className={style.icon} />
-                </Tooltip>
+                <ClickAwayListener onClickAway={handleTooltipClose}>
+                    <Tooltip
+                        PopperProps={{
+                            disablePortal: true,
+                        }}
+                        onClose={handleTooltipClose}
+                        open={open}
+                        disableFocusListener
+                        disableHoverListener
+                        disableTouchListener
+                        title={typeProperties[props.type].helptext}
+                    >
+                        <div className={style.icon} onClick={handleTooltipOpen}></div>
+
+                    </Tooltip>
+                </ClickAwayListener>
             }
         </MuiThemeProvider>
     )
