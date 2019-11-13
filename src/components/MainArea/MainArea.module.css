@@ -22,7 +22,7 @@
 
 /* нижний отступ заголовка рабочей области */
 .title {
-    font-family: "Arial";
+    font-family: Sans, serif;
     color: #707070;
     margin-bottom: 2vh;
     font-size: 3.5vh;
