@@ -1,0 +1,27 @@
+.wrapper {
+    --text-color: #707070;
+    padding: 5px;
+    color: var(--text-color);
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.wrapper:hover {
+    opacity: 0.5;
+}
+
+.icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1rem;
+    width: 1rem;
+}
+
+.text {
+    margin-left: 5px;
+}
