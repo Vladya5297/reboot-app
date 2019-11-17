@@ -1,0 +1,16 @@
+.icon:hover {
+    cursor: help;
+    opacity: 0.5;
+}
+.icon {
+    height: 1rem;
+    width: 1rem;
+    background-image: url('../../icons/iconsSVG/QuestionMarkIcon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 2px 5px;
+}
+
+.MuiTooltip-popper {
+    font-size: 1rem;
+}

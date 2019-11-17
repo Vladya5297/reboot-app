@@ -1,19 +1,27 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom'
+import Header from './components/Header/HeaderContainer'
+import MainArea from './components/MainArea/MainAreaContainer'
+import SegmentWindow from './components/SegmentWindow/SegmentWindowContainer'
+import StickerEditingWindow from './components/StickerEditingWindow/StickerEditingWindowContainer'
+import { connect } from 'react-redux'
 import './App.css';
-import MainPage from './components/MainPage/MainPage';
 
-function App() {
+const mapStateToProps = (state) => ({
+  isSegmentWindowActive: state.segmentWindow.isActive,
+  isStickerEditingActive: state.stickerEditingWindow.isActive,
+});
 
+function App (props) {
+  
   // вывод страницы
   return (
     <div className="App">
-      <Switch>
-        <Route path='/' exact component={MainPage} />
-        <Route path='/idea-presentation' exact component={MainPage} />
-      </Switch>
+        <Header />
+        <MainArea />
+        {props.isSegmentWindowActive && <SegmentWindow />}
+        {props.isStickerEditingActive && <StickerEditingWindow />}
     </div>
   );
 }
 
-export default App;
+export default connect(mapStateToProps)(App);

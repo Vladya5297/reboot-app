@@ -7,20 +7,17 @@ import { Provider } from 'react-redux'
 import store from './store/store'
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DndProvider } from 'react-dnd'
-import { BrowserRouter } from 'react-router-dom'
 
 /* оборачиваем весь App в Provider, чтобы 
 store был доступен внутри компонентов */
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <DndProvider backend={HTML5Backend}>
-                <App />
-            </DndProvider>
-        </BrowserRouter>
-    </Provider>,
+        <DndProvider backend={HTML5Backend}>
+            <App />
+        </DndProvider>
+    </Provider>, 
     document.getElementById('root')
-);
+    );
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
