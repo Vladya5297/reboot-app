@@ -4,3 +4,10 @@
     display: flex;
     flex-direction: column;
 }
+
+@font-face {
+    font-family: 'Circe Regular';
+    src: url('./fonts/Circe-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    }

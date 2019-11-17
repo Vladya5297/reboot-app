@@ -1,35 +1,36 @@
 import React from 'react'
 import Header from './Header'
-import HeaderButton from '../HeaderButton/HeaderButton'
-import AddButton from '../AddButton/AddButtonContainer'
+import logo from '../../icons/iconsSVG/Logo.svg'
+import Button from '../Button/Button'
+import { connect } from 'react-redux'
+import { addSticker } from '../../store/actionCreators'
+import { newSticker } from '../../store/itemTypes'
 
-import saveIcon from '../../icons/iconsSVG/SaveIcon.svg'
-import playIcon from '../../icons/iconsSVG/ContinueIcon.svg'
-import plusIcon from '../../icons/iconsSVG/PlusIcon.svg'
-import backArrowIcon from '../../icons/iconsSVG/BackArrowIcon.svg'
 
 const HeaderContainer = (props) => {
-    // создаём массив кнопок, поле id требуется для метода map
-  let rightButtons = [
-    {id: "1", icon: saveIcon, text: "Сохранить"},
-    {id: "2", icon: playIcon, text: "Продолжить"},
-  ];
-
-  rightButtons = rightButtons.map((elem)=>{
-    return (<HeaderButton
-        key={elem.id}
-        icon={elem.icon}
-        text={elem.text} 
-      />);
-  });
-
+  let isActive = !props.stickers.length;
   return (
     <Header>
-        <HeaderButton icon={backArrowIcon} text="Меню" />
-        {rightButtons}
-        <AddButton icon={plusIcon} text="СТИКЕР" />
+      <img src={logo} alt="Logo" />
+      <Button isAccent={false} clickHandler={isActive ? props.addSticker : undefined}>
+          Добавить стикер
+      </Button>
+      <Button isAccent={true}>Сохранить и продолжить</Button>
     </Header>
   )
 }
 
-export default HeaderContainer;
+const mapStateToProps = (state) => ({
+  stickers: state.stickers.array.filter((elem) => {
+    return elem.type === newSticker
+  })
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addSticker: () => dispatch(addSticker()),
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HeaderContainer);

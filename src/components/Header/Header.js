@@ -10,8 +10,8 @@ const Header = (props) => {
         // третий - по центру
         <div className={style.wrapper}>
             <div className={style.left}>{props.children.slice(0, 1)}</div>
-            <div className={style.center}>{props.children.slice(2)}</div>
-            <div className={style.right}>{props.children.slice(1, 2)}</div>
+            <div className={style.center}>{props.children.slice(1, 2)}</div>
+            <div className={style.right}>{props.children.slice(2)}</div>
         </div>
     );
 }

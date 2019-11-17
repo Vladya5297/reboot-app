@@ -11,7 +11,7 @@ const MainArea = (props) => {
     return (
     <div className={style.main}>
           <div className={style["work-area-wrapper"]}>
-            <div className={style.title}>ПРОДУКТ</div>
+            <div className={style.title}>ВАШ ПРОДУКТ</div>
             <WorkArea icon = {bulbIcon}>
                 {props.children[0]}
             </WorkArea>
@@ -21,7 +21,7 @@ const MainArea = (props) => {
           <DeleteStickerZone />
 
           <div className={style["work-area-wrapper"]}>
-            <div className={style.title}>КЛИЕНТ</div>
+            <div className={style.title}>ВАШ КЛИЕНТ</div>
             <WorkArea icon = {clientIcon}>
                 {props.children[1]}
             </WorkArea>

@@ -22,8 +22,8 @@
 
 /* нижний отступ заголовка рабочей области */
 .title {
-    font-family: "Arial";
+    font-family: Circe Regular;
     color: #707070;
     margin-bottom: 2vh;
-    font-size: 3.5vh;
+    font-size: 1.3rem;
 }
