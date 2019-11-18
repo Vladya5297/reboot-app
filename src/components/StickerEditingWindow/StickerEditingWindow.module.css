@@ -1,14 +1,19 @@
 .wrapper {
-    width: 38vw;
-    height: 28vw;
+    width: 50vw;
+    height: 33vw;
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     margin: auto;
-    background: #E4E4E4;
+    background: white;
+    border-radius: 10px;
     z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .blur {
@@ -20,37 +25,44 @@
 }
   
   .title {
+    height: 3vw;
     font-weight: bold;
     font-size: 1.2rem;
-    height: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
-    color: #707070;
+    color: #3D4853;
   }
   
-  .body textarea {
-    width: 100%;
-    border: 0;
+  textarea {
+    width: 33vw;
     padding: 8px;
     overflow: auto;
     resize: none;
     outline: none;
     box-sizing: border-box;
-    margin-top: 10px;
+    font-family: Circe Regular;
+  }
+
+  .textareaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: bold;
+    font-size: 0.9rem;
   }
   
   .body textarea::placeholder {
-    opacity: 0.7;
+    font-family: Circe Regular;
+    opacity: 0.6;
   }
 
   .stickerTittle {
-    height: 6vw;
+    height: 3vw;
   }
   
   .stickerDescription {
-    height: 13vw;
+    height: 10vw;
   }
   
   .footer {
@@ -58,29 +70,4 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
-  
-  .cancel {
-    width: 7vw;
-    height: 2vw;
-    padding: 5px;
-    text-align: center;
-    cursor: pointer;
-    background: grey;
-    color: white;
-  }
-  
-  .accept {
-    width: 7vw;
-    height: 2vw;
-    padding: 5px;
-    text-align: center;
-    cursor: pointer;
-    background: white;
-    color: #444444;
-    transition: 0.3s;
-  }
-  
-  .button:hover {
-    box-shadow: 0px 3px 5px -4px black;
   }
