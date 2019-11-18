@@ -265,3 +265,6 @@
 [1112/214524.389:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [1112/214524.389:ERROR:crash_report_database_win.cc(469)] failed to stat report
 >>>>>>> c70fac5bf0a4092f1509743d7446e850a919c6f9
+[1118/024140.555:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1118/024140.556:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1118/024140.556:ERROR:crash_report_database_win.cc(469)] failed to stat report

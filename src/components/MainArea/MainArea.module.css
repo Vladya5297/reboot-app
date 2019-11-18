@@ -1,11 +1,17 @@
-/* flex: 1 - для того, чтобы область занимала всё место под header'ом
-   padding - можно настраивать, чтобы сближать/отдалять рабочие области */
+/* flex: 1 - для того, чтобы область занимала всё место под header'ом */
 .main {
     flex: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #E4E4E4;
+}
+
+.work-area {
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 /* контейнер для заголовка и рабочей области */
@@ -16,14 +22,22 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 3vh;
+    padding-top: 2.3vh;
 }
 
-
-/* нижний отступ заголовка рабочей области */
 .title {
-    font-family: Circe Regular;
-    color: #707070;
+    color: rgba(61, 72, 83, 0.6);
     margin-bottom: 2vh;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+}
+
+.radius {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: solid 10px #E4E4E4;
+    border-radius: 25px;
+    top: -10px;
+    left: -10px;
+    z-index: 1;
 }

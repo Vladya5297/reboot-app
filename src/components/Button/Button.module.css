@@ -3,12 +3,12 @@
     margin: 10px;
     min-width: 15vw;
     border-radius: 3px;
-    font-family: Circe Regular;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     position: relative;
+    user-select: none;
 }
 
 .accent {
