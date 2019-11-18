@@ -20,7 +20,7 @@ const DeleteStickerZone = (props) => {
     return (
         <div ref={drop}
             style={{
-                display: props.isVisible ? "block" : "none",
+                bottom: props.isVisible ? "5vw" : "-8vw",
                 backgroundImage: "url(" + trashIcon + ")",
                 opacity: isOver ? 1 : 0.5,
             }}

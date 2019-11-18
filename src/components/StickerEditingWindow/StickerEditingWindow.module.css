@@ -58,10 +58,11 @@
   }
 
   .stickerTittle {
-    height: 3vw;
+    height: 2.5rem;
   }
   
   .stickerDescription {
+    min-height: 2.5rem;
     height: 10vw;
   }
   

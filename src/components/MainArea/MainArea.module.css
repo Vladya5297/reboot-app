@@ -5,6 +5,8 @@
     justify-content: space-around;
     align-items: center;
     background-color: #E4E4E4;
+    position: relative;
+    overflow: hidden;
 }
 
 .work-area {
