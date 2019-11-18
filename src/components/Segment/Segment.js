@@ -53,7 +53,7 @@ const Segment = (props) => {
     return (
         <div className={style.wrapper} 
         style={{ boxShadow: 
-        isOver ? "inset 0 0 2px 2px " + typeProperties[props.type].color : "none" 
+        isOver ? "inset 0 0 1px 3px " + typeProperties[props.type].color : "none" 
         }}>
             <div ref={drop}
                 className={style.dropzone}>
