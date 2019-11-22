@@ -9,6 +9,16 @@
     text-align: center;
     position: relative;
     user-select: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: default;
 }
 
 .accent {
@@ -19,4 +29,5 @@
 .regular {
     color: #6F27E2;
     box-shadow: inset 0 0 0 1px #8430CF;
+    background: none;
 }

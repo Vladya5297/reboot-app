@@ -8,11 +8,11 @@ import { newSticker } from '../../store/itemTypes'
 
 
 const HeaderContainer = (props) => {
-  let isActive = !props.stickers.length;
+  let isDisabled = !!props.stickers.length;
   return (
     <Header>
       <img src={logo} alt="Logo" />
-      <Button isAccent={false} clickHandler={isActive ? props.addSticker : undefined}>
+      <Button isAccent={false} clickHandler={props.addSticker} disabled={isDisabled}>
           Добавить стикер
       </Button>
       <Button isAccent={true}>Сохранить и продолжить</Button>
