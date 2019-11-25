@@ -8,17 +8,12 @@
     text-align: center;
     padding: 5px;
     box-sizing: border-box;
+    box-shadow: 0px 3px 5px -5px black;
 }
 
 .stickerFonts {
     font-size: 1rem;
     font-weight: bold;
     color: #444444;
-    overflow-wrap: break-word; 
-    word-wrap: break-word;
-    word-break: break-all;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
+    word-break: break-word;
 }
