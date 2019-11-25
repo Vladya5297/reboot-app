@@ -28,7 +28,7 @@ export default {
     },
 
     solutions: {
-        color: "#E5E7FA", title: "Как клиент решает задачу сейчас", slots: 4,
+        color: "#E5E7FA", title: "Как задача решается сейчас", slots: 4,
         helptext: <div>Опишите то, как проблема решается сейчас</div>,
     },
 
