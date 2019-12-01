@@ -5,7 +5,6 @@ action могут быть любыми. Важно: редьюсер долже
 возвращать именно новый объект. Чтобы добавить новый
 функционал, пишем в новом файле новую функцию-редьюсер
 и дописываем её имя в combineReducers */
-import { newSticker } from '../itemTypes'
 import {
     ADD_STICKER,
     DELETE_STICKER,
@@ -27,12 +26,13 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case ADD_STICKER:
             {
+                const positions = state.array.map(elem => elem.position);
                 const sticker = {
                     header: "",
                     content: "",
-                    position: 0,
+                    position: Math.max(...positions) + 1,
                     id: state.currentId + 1,
-                    type: newSticker,
+                    type: action.stickerType,
                 }
                 return {
                     ...state,

@@ -36,7 +36,9 @@ const Segment = (props) => {
         ));
 
     return (
-        <div className={style.wrapper} ref={drop}
+        <div className={style.wrapper} ref={drop} 
+        onMouseEnter={()=>props.changeHover(props.type)}
+        onMouseLeave={()=>props.changeHover("")}
             style={{
                 boxShadow:
                     isOver ? "inset 0 0 1px 3px " + typeProperties[props.type].color : "none"

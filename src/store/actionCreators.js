@@ -7,10 +7,11 @@ import {ADD_STICKER,
     STOP_STICKER_DRAGGING,
     OPEN_STICKER_EDITING_WINDOW,
     CLOSE_STICKER_EDITING_WINDOW,
+    CHANGE_HOVER,
 } from './actionTypes'
 
 
-export function addSticker() {return {type: ADD_STICKER}}
+export function addSticker(stickerType) {return {type: ADD_STICKER, stickerType}}
 export function deleteSticker(id) {return {type: DELETE_STICKER, id}}
 export function changeStickerType(id, newType) 
 {return {type: CHANGE_STICKER_TYPE, id, newType}
@@ -26,3 +27,5 @@ export function stopStickerDragging() {return {type: STOP_STICKER_DRAGGING}}
 
 export function openStickerEditingWindow(id, stickerType) {return {type: OPEN_STICKER_EDITING_WINDOW, id, stickerType}}
 export function closeStickerEditingWindow() {return {type: CLOSE_STICKER_EDITING_WINDOW}}
+
+export function changeHover(hoverType) {return {type: CHANGE_HOVER, hoverType}}

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {changeStickerPosition} from '../../../store/actionCreators'
+import {changeStickerPosition} from '../../store/actionCreators'
 import Slot from './Slot'
 
 const mapStateToProps = (state) => ({

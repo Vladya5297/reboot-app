@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDrag } from 'react-dnd'
 import * as style from './Sticker.module.css'
-import { newSticker } from '../../store/itemTypes'
 import typeProperties from '../../store/typeProperties'
 
 const Sticker = (props) => {
@@ -13,17 +12,11 @@ const Sticker = (props) => {
         end: (item, monitor) => {
             props.stopStickerDragging();
             const dropResult = monitor.getDropResult();
-            if (dropResult && dropResult.type === "DeleteStickerZone") {
-              props.deleteSticker(props.id);
-            }
-            else if (dropResult && dropResult.type === "Slot") {
+            if (dropResult && dropResult.type === "Slot") {
                 
             }
             else if (dropResult) {
                 props.changeStickerType(props.id, dropResult.type);
-                // if (props.type === newSticker) {
-                //     props.openStickerEditingWindow(props.id, props.type);
-                // }
             }
         }
     });

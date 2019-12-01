@@ -1,0 +1,31 @@
+.wrapper {
+    position: relative;
+    height: 7vw;
+    width: 8vw;
+    border: dashed 2px;
+    cursor: pointer;
+}
+
+.horisontal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 3px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.vertical {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 3px;
+    width: 20px;
+    border-radius: 2px;
+}

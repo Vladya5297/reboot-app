@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Segment from './Segment'
+import { changeHover } from '../../store/actionCreators';
 
 const mapStateToProps = (state, ownProps) => ({
     stickers: state.stickers.array.filter((elem)=>{
@@ -8,7 +9,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-
+    changeHover: (hoverType)=>{dispatch(changeHover(hoverType))}
 })
 
 export default connect(
