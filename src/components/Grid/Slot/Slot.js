@@ -1,16 +1,16 @@
 import React from 'react'
-import {useDrop} from 'react-dnd'
-import * as style from './Slot.module.css'
+import { useDrop } from 'react-dnd'
+import style from './Slot.module.css'
 
 const Slot = (props) => {
-    const [{isOver}, drop] = useDrop({
+    const [{ isOver }, drop] = useDrop({
         accept: props.type,
         collect: monitor => ({
             isOver: !!monitor.isOver(),
         }),
-        drop: () => ({type: "Slot", position: props.position}),
+        drop: () => ({ type: "Slot", position: props.position }),
     });
-    
+
     // создаём переменную-флаг, чтобы проверять момент вхождения в область
     let [dragEnter, setDragEnter] = React.useState(false);
     if (isOver && !dragEnter) {
@@ -22,7 +22,7 @@ const Slot = (props) => {
 
     return (
         <div ref={drop}
-        className={style.slot}>
+            className={style.slot}>
             {props.children}
         </div>
     );

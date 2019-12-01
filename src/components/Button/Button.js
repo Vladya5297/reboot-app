@@ -4,13 +4,11 @@ import style from './Button.module.css'
 const Button = (props) => {
     const classes = `${style.button} ${props.isAccent ? style.accent : style.regular}`; 
     return (
-        <div onClick={props.clickHandler} 
+        <button onClick={props.clickHandler} 
         className={classes}
-        style={{
-            cursor: props.clickHandler ? "pointer" : "default"
-        }}>
+        disabled={props.disabled}>
             {props.children}
-        </div>
+        </button>
     )
 }
 

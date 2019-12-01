@@ -2,7 +2,7 @@ import React from 'react';
 import { useDrop } from 'react-dnd'
 import Sticker from '../Sticker/StickerContainer'
 import * as types from '../../store/itemTypes'
-import * as style from './Segment.module.css'
+import style from './Segment.module.css'
 import Grid from '../Grid/Grid';
 import typeProperties from '../../store/typeProperties'
 
@@ -32,37 +32,21 @@ const Segment = (props) => {
                 content={elem.content}
                 position={elem.position}
                 id={elem.id}
-                type={elem.type}/>
+                type={elem.type} />
         ));
 
-    // создаём объект - кнопку
-    const openWideButton = <div className={style.openWide} onClick={() => props.openWide(props.type)}/>;
-    // создаём объект заголовка с кнопкой расширения сегмента
-    const title = <div className={style.title} style={{
-        paddingTop: props.isOnTop ? "5px" : "0",
-        paddingBottom: props.isOnTop ? "0" : "5px"
-    }}>
-        {props.children}
-        {stickers.length > typeProperties[props.type].slots && openWideButton}
-    </div>
-    // Заголовок позиционируем с помощью отрицательных отступов
-    // При наведении выводим рамку с цветом сегмента
-    // Сам стикер помещается в dropzone, чтобы не было бага с иконкой
-    // Внутри dropzone делаем сетку с указанным числом слотов
-    // Выводим кнопку "раскрыть на весь экран", если стикеров больше, чем слотов
     return (
-        <div className={style.wrapper} 
-        style={{ boxShadow: 
-        isOver ? "inset 0 0 1px 3px " + typeProperties[props.type].color : "none" 
-        }}>
-            <div ref={drop}
-                className={style.dropzone}>
-                {props.isOnTop && title}
-                <Grid type={props.type} slots={typeProperties[props.type].slots}>
-                    {stickers}
-                </Grid>
-                {!props.isOnTop && title}
-            </div>
+        <div className={style.wrapper} ref={drop}
+            style={{
+                boxShadow:
+                    isOver ? "inset 0 0 1px 3px " + typeProperties[props.type].color : "none"
+            }}>
+
+            {props.isOnTop && props.children}
+            <Grid type={props.type} slots={typeProperties[props.type].slots}>
+                {stickers}
+            </Grid>
+            {!props.isOnTop && props.children}
         </div>
     )
 }

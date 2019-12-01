@@ -1,6 +1,8 @@
 .wrapper{
+    height: 2vw;
     font-size: 0.9rem;
     display: flex;
     justify-content: center;
     color: rgba(61, 72, 83, 0.6);
+    box-sizing: border-box;
 }

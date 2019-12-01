@@ -6,10 +6,10 @@ import * as style from './MainArea.module.css'
 const MainArea = (props) => {
   return (
     <div className={style.main}>
+      
       <div className={style["work-area-wrapper"]}>
         <div className={style.title}>ВАШ ПРОДУКТ</div>
         <div className={style["work-area"]}>
-          <div className={style.radius} />
           {props.children[0]}
         </div>
       </div>
@@ -20,10 +20,10 @@ const MainArea = (props) => {
       <div className={style["work-area-wrapper"]}>
         <div className={style.title}>ВАШ КЛИЕНТ</div>
         <div className={style["work-area"]}>
-          <div className={style.radius} />
           {props.children[1]}
         </div>
       </div>
+      
     </div>
   );
 }

@@ -3,12 +3,12 @@
     flex: 1;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     background-color: #E4E4E4;
 }
 
 .work-area {
-    width: 38vw;
+    height: 36vw;
+    width: 36vw;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -16,28 +16,14 @@
 
 /* контейнер для заголовка и рабочей области */
 .work-area-wrapper {
-    height: 100%;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    padding-top: 2.3vh;
+    justify-content: center;
 }
 
 .title {
     color: rgba(61, 72, 83, 0.6);
     margin-bottom: 2vh;
     font-size: 1.2rem;
-}
-
-.radius {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border: solid 10px #E4E4E4;
-    border-radius: 25px;
-    top: -10px;
-    left: -10px;
-    z-index: 1;
 }
