@@ -27,3 +27,22 @@
     display: flex;
     justify-content: center;
 }
+
+.link-button {
+    padding: 5px 10px;
+    margin: 10px;
+    min-width: 10vw;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    user-select: none;
+    border: none;
+    font: inherit;
+    text-decoration: none;
+    outline: none;
+    transition: 0.3s;
+    color: white;
+    background: linear-gradient(220.46deg, #6F27E2 -2.59%, #8430CF 65.86%);
+}
