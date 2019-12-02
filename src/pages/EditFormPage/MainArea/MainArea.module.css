@@ -1,0 +1,6 @@
+/* flex: 1 - для того, чтобы область занимала всё место под header'ом */
+.main {
+    flex: 1;
+    display: flex;
+    background-color: #E4E4E4;
+}

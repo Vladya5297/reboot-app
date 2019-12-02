@@ -3,7 +3,9 @@
     --accent-color: #A6ADB4;
     display: flex;
     justify-content: space-between;
-    background-color: var(--main-color);    
+    background-color: var(--main-color);
+    box-shadow: 0px -15px 10px 10px black;
+    z-index: 1;
 }
 
 .left {

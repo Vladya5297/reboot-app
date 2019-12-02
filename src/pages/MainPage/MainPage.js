@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header/HeaderContainer'
+import Header from './Header/HeaderContainer'
 import MainArea from '../../components/MainArea/MainAreaContainer'
 import StickerEditingWindow from '../../components/StickerEditingWindow/StickerEditingWindowContainer'
 import { connect } from 'react-redux'

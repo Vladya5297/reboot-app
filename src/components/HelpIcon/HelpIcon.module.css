@@ -2,8 +2,8 @@
     cursor: help;
 }
 .icon {
-    height: 1rem;
-    width: 1rem;
+    height: 16px;
+    width: 16px;
     background-image: url('../../icons/iconsSVG/QuestionMarkIcon.svg');
     background-size: contain;
     background-repeat: no-repeat;

@@ -1,0 +1,7 @@
+.wrapper {
+    height: 100%;
+    width: 20vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
