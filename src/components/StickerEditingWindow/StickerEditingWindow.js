@@ -1,5 +1,5 @@
 import React from 'react'
-import * as style from './StickerEditingWindow.module.css'
+import classes from './StickerEditingWindow.module.css'
 import typeProperties from '../../store/typeProperties'
 import HelpIcon from '../HelpIcon/HelpIcon'
 import Button from '../Button/Button'
@@ -8,39 +8,47 @@ const StickerEditingWindow = (props) => {
     const [header, setHeader] = React.useState(props.sticker.header);
     const [content, setContent] = React.useState(props.sticker.content);
     return (
-        <div className={style.blur} onClick={(event) => {
+        <div className={classes.blur} onClick={(event) => {
             event.stopPropagation();
         }}>
-            <div className={style.wrapper} onClick={(event) => { event.stopPropagation() }}>
+            <div className={classes.wrapper} onClick={(event) => { event.stopPropagation() }}>
 
-                <div className={style.title}>
-                    {typeProperties[props.type].title}
+                <div className={classes.title}>
+                    {typeProperties[props.sticker.type].title}
                     <HelpIcon type={props.sticker.type} />
                 </div>
 
-                <div className={style.textareaContainer}>
-                    Тема
+                <div className={classes.textareaContainer}>
+                    Тема стикера
                     <textarea maxLength="37"
-                        className={style.stickerTittle}
-                        placeholder="Назовите ваш стикер"
+                        className={classes.stickerTittle}
+                        placeholder="Кратко сформулируйте тему стикера. Тема будет видна на шаблоне"
                         value={header}
                         onChange={(event) => setHeader(event.target.value)} />
                 </div>
 
-                <div className={style.textareaContainer}>
+                <div className={classes.textareaContainer}>
                     Описание
                     <textarea maxLength="337"
-                        className={style.stickerDescription}
-                        placeholder="Сформулируйте вашу идею"
+                        className={classes.stickerDescription}
+                        placeholder="Сформулируйте свои мысли"
                         value={content}
                         onChange={(event) => setContent(event.target.value)} />
                 </div>
 
-                <div className={style.footer}>
+                <div className={classes.footer}>
                     <Button isAccent={false} clickHandler={props.closeWindow}>Отмена</Button>
-                    <Button isAccent={true} clickHandler={()=>{props.closeWindow();
-                        props.changeStickerText(props.sticker.id, header, content);}}>Принять</Button>
+                    <Button isAccent={true} clickHandler={() => {
+                        props.closeWindow();
+                        props.changeStickerText(props.sticker.id, header, content);
+                    }}>Принять</Button>
                 </div>
+
+                <div className={classes.delete}
+                    onClick={() => {
+                        props.closeWindow();
+                        props.deleteSticker(props.sticker.id);
+                    }} />
             </div>
         </div>
     )

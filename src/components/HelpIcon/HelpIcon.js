@@ -29,7 +29,7 @@ const HelpIcon = (props) => {
     return (
         <MuiThemeProvider theme={theme}>
             {props.isStickerEditingActive ?
-                <Tooltip title={typeProperties[props.type].helptext} placement="right-start">
+                <Tooltip title={typeProperties[props.type].helptext} placement="right">
                     <div className={style.icon} />
                 </Tooltip> :
                 <Tooltip title={typeProperties[props.type].helptext}>

@@ -5,7 +5,8 @@ import { changeHover } from '../../store/actionCreators';
 const mapStateToProps = (state, ownProps) => ({
     stickers: state.stickers.array.filter((elem)=>{
         return elem.type === ownProps.type
-    })
+    }),
+    hover: state.hover
 });
 
 const mapDispatchToProps = (dispatch) => ({

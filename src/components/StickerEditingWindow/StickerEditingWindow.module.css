@@ -1,73 +1,86 @@
 .wrapper {
-    width: 50vw;
-    height: 33vw;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    background: white;
-    border-radius: 10px;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .blur {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, 0.5);
+  width: 45vw;
+  height: 30vw;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-  
-  .title {
-    height: 3vw;
-    font-weight: bold;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3D4853;
-  }
-  
-  textarea {
-    width: 33vw;
-    padding: 8px;
-    overflow: auto;
-    resize: none;
-    outline: none;
-    box-sizing: border-box;
-    font-family: Circe Regular;
-  }
 
-  .textareaContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-  
-  .body textarea::placeholder {
-    font-family: Circe Regular;
-    opacity: 0.6;
-  }
+.blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-  .stickerTittle {
-    height: 3vw;
-  }
-  
-  .stickerDescription {
-    height: 10vw;
-  }
-  
-  .footer {
-    height: 3.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
+.title {
+  height: 3vw;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3D4853;
+}
+
+.textareaContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+textarea {
+  width: 35vw;
+  padding: 8px;
+  overflow: auto;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Circe Regular;
+}
+
+.body textarea::placeholder {
+  font-family: Circe Regular;
+  opacity: 0.6;
+}
+
+.stickerTittle {
+  /*Задаём в пикселях, иначе крошится на маленьких разрешениях
+   потом исправить с помощью media-запросов*/
+  height: 40px;
+}
+
+.stickerDescription {
+  height: 10vw;
+}
+
+.footer {
+  height: 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.delete {
+  height: 40px;
+  width: 40px;
+  mask-image: url('../../icons/iconsSVG/TrashIcon.svg');
+  background-color: red;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
