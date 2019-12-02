@@ -4,6 +4,7 @@
     width: 8vw;
     border: dashed 2px;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .horisontal {

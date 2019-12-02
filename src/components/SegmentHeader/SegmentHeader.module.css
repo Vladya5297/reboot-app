@@ -1,8 +1,16 @@
-.wrapper{
-    height: 2vw;
+.wrapper {
+    height: 3vw;
+    width: 100%;
     font-size: 0.9rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     color: rgba(61, 72, 83, 0.6);
     box-sizing: border-box;
+    line-height: 15px;
+}
+
+.title {
+    max-width: 80%;
 }

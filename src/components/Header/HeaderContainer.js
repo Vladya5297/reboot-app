@@ -11,7 +11,7 @@ const HeaderContainer = (props) => {
       <> </>
       <>
         <Button isAccent={false}>Сохранить черновик</Button>
-        <Button isAccent={true}>Продолжить</Button>
+        <Button isAccent={true}>Сформулировать идею</Button>
       </>
     </Header>
   )

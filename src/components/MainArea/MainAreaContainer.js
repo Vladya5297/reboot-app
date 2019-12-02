@@ -12,9 +12,9 @@ const MainAreaContainer = (props) => {
     {id: 2, isOnTop: true, type: types.advantages},
     {id: 3, isOnTop: false, type: types.problemSolvings},
     {id: 4, isOnTop: true, type: types.desires},
-    {id: 5, isOnTop: true, type: types.solutions},
-    {id: 6, isOnTop: false, type: types.tasks},
-    {id: 7, isOnTop: false, type: types.problems},
+    {id: 5, isOnTop: true, type: types.problems},
+    {id: 6, isOnTop: false, type: types.solutions},
+    {id: 7, isOnTop: false, type: types.tasks},
   ]
 
   let childComponents = segments.map((elem, ind)=>{
