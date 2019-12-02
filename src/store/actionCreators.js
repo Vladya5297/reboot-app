@@ -28,4 +28,4 @@ export function stopStickerDragging() {return {type: STOP_STICKER_DRAGGING}}
 export function openStickerEditingWindow(id, stickerType) {return {type: OPEN_STICKER_EDITING_WINDOW, id, stickerType}}
 export function closeStickerEditingWindow() {return {type: CLOSE_STICKER_EDITING_WINDOW}}
 
-export function changeHover(hoverType) {return {type: CHANGE_HOVER, hoverType}}
+export function changeHover(hover) {return {type: CHANGE_HOVER, hover}}

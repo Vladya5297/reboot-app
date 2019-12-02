@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    changeHover: (hoverType)=>{dispatch(changeHover(hoverType))}
+    changeHover: (hover)=>{dispatch(changeHover(hover))}
 })
 
 export default connect(
