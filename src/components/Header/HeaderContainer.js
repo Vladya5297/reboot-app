@@ -5,7 +5,6 @@ import Button from '../Button/Button'
 import { connect } from 'react-redux'
 import * as types from '../../store/itemTypes'
 import { NavLink } from 'react-router-dom'
-import classes from './Header.module.css'
 
 const HeaderContainer = (props) => {
   return (
@@ -14,13 +13,15 @@ const HeaderContainer = (props) => {
       <> </>
       <>
         <Button isAccent={false} clickHandler={() => { alert("Сохранено") }}>Сохранить черновик</Button>
-        <NavLink to="/" 
-        className={classes["link-button"]}
-        style={{
-          pointerEvents: props.disabled ? "none" : "auto",
-          opacity: props.disabled ? 0.5 : 1,
-          cursor: props.disabled ? "default" : "pointer"
-        }}>Сформулировать идею</NavLink>
+        <Button isAccent={true} disabled={props.disabled}>
+          <NavLink to="/a"
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%"
+            }} />
+          Сформулировать идею
+          </Button>
       </>
     </Header>
   )

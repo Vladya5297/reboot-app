@@ -2,13 +2,16 @@ import React from 'react'
 import style from './Button.module.css'
 
 const Button = (props) => {
-    const classes = `${style.button} ${props.isAccent ? style.accent : style.regular}`; 
+    const classes = [
+    style.button,
+    props.isAccent ? style.accent : style.regular,
+    props.disabled && style.disabled
+    ].join(" ");
     return (
-        <button onClick={props.clickHandler} 
-        className={classes}
-        disabled={props.disabled}>
+        <div onClick={props.clickHandler} 
+        className={classes}>
             {props.children}
-        </button>
+        </div>
     )
 }
 

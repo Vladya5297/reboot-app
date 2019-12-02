@@ -13,4 +13,5 @@
 
 .title {
     max-width: 80%;
+    word-break: break-word;
 }
