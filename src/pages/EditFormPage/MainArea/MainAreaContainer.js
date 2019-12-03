@@ -1,20 +1,16 @@
 import MainArea from './MainArea';
 import { connect } from 'react-redux'
-import fieldsProps from '../../../store/formFields'
+import { changeField } from '../../../store/actionCreators'
 
 const mapStateToProps = (state) => ({
-  value: (() => {
-    const stickers = [];
-    const fieldType = fieldsProps[state.currentField].type;
-    for (let type of fieldType) {
-      stickers.push(...state.stickers.array.filter(sticker =>
-        sticker.type === type)
-      )
-    }
-    return stickers.map(sticker => sticker.content).join("\n\n");
-  })()
+  value: state.fieldValues[state.currentField]
 });
 
+const mapDispatchToProps = (dispatch) => ({
+  changeField: (field) => { dispatch(changeField(field)) }
+})
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(MainArea);

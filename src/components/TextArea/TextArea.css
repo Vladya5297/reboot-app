@@ -1,0 +1,16 @@
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  overflow: auto;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  border: none;
+}
+
+textarea::placeholder {
+  font-family: Circe Regular;
+  opacity: 0.6;
+  font-weight: normal;
+}

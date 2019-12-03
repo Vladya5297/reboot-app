@@ -26,7 +26,9 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case ADD_STICKER:
             {
-                const positions = state.array.map(elem => elem.position);
+                const positions = [0, ...state.array
+                .filter(elem => elem.type === action.stickerType)
+                .map(elem => elem.position)];
                 const sticker = {
                     header: "",
                     content: "",

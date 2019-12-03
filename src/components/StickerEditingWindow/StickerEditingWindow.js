@@ -11,7 +11,7 @@ const StickerEditingWindow = (props) => {
         <div className={classes.blur} onClick={(event) => {
             event.stopPropagation();
         }}>
-            <div className={classes.wrapper} onClick={(event) => { event.stopPropagation() }}>
+            <div className={classes.wrapper}>
 
                 <div className={classes.title}>
                     {typeProperties[props.sticker.type].title}
@@ -19,7 +19,7 @@ const StickerEditingWindow = (props) => {
                 </div>
 
                 <div className={classes.textareaContainer}>
-                    Тема стикера
+                    <strong>Тема стикера</strong>
                     <textarea maxLength="37"
                         className={classes.stickerTittle}
                         placeholder="Кратко сформулируйте тему стикера. Тема будет видна на шаблоне"
@@ -28,7 +28,7 @@ const StickerEditingWindow = (props) => {
                 </div>
 
                 <div className={classes.textareaContainer}>
-                    Описание
+                    <strong>Описание</strong>
                     <textarea maxLength="337"
                         className={classes.stickerDescription}
                         placeholder="Сформулируйте свои мысли"

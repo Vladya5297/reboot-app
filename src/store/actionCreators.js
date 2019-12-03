@@ -9,6 +9,7 @@ import {ADD_STICKER,
     CLOSE_STICKER_EDITING_WINDOW,
     CHANGE_HOVER,
     CHANGE_FIELD,
+    CHANGE_FIELD_TEXT,
 } from './actionTypes'
 
 
@@ -32,3 +33,5 @@ export function closeStickerEditingWindow() {return {type: CLOSE_STICKER_EDITING
 export function changeHover(hover) {return {type: CHANGE_HOVER, hover}}
 
 export function changeField(field) {return {type: CHANGE_FIELD, field}}
+
+export function changeFieldText(field, text) {return {type: CHANGE_FIELD_TEXT, field, text}}

@@ -1,7 +1,7 @@
 import React from 'react'
-import Segment from '../Segment/SegmentContainer'
-import SegmentHeader from '../SegmentHeader/SegmentHeader'
-import * as types from '../../store/itemTypes'
+import Segment from '../../../components/Segment/SegmentContainer'
+import SegmentHeader from '../../../components/SegmentHeader/SegmentHeader'
+import * as types from '../../../store/itemTypes'
 import MainArea from './MainArea';
 
 // Этот компонент был создан, чтобы разгрузить компонент MainArea

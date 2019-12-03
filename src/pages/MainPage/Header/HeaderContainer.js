@@ -5,6 +5,8 @@ import Button from '../../../components/Button/Button'
 import { connect } from 'react-redux'
 import * as types from '../../../store/itemTypes'
 import { NavLink } from 'react-router-dom'
+import fieldsProps from '../../../store/formFields'
+import { changeFieldText } from '../../../store/actionCreators'
 
 const HeaderContainer = (props) => {
   return (
@@ -13,7 +15,8 @@ const HeaderContainer = (props) => {
       <> </>
       <>
         <Button isAccent={false} clickHandler={() => { alert("Сохранено") }}>Сохранить черновик</Button>
-        <Button isAccent={true} disabled={props.disabled}>
+        <Button isAccent={true} disabled={props.disabled}
+        clickHandler={()=>{props.fillFields(props.stickers)}}>
           <NavLink to="/edit-form"
             style={{
               position: "absolute",
@@ -35,9 +38,27 @@ const mapStateToProps = (state) => ({
       if (!stickers.length) return true;
     }
     return false;
-  })()
+  })(),
+  stickers: state.stickers.array
 });
 
+const mapDispatchToProps = (dispatch) => ({
+  fillFields: (stickers) => {
+    for (let field in fieldsProps) {
+      const fieldType = fieldsProps[field].type;
+      const appropStickers = [];
+      for (let type of fieldType) {
+        appropStickers.push(...stickers.filter(sticker =>
+          sticker.type === type)
+        )
+      }
+      let text = appropStickers.map(sticker => sticker.content).join("\n");
+      dispatch(changeFieldText(field, text));
+    }
+  }
+})
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(HeaderContainer);

@@ -24,8 +24,12 @@ const SideMenu = (props) => {
                 {fieldsProps[elem].header}
             </RadioButton>)
     });
+    const classList = [
+        classes.wrapper,
+        props.disabled && classes.disabled
+    ].join(" ");
     return (
-        <div className={classes.wrapper}>
+        <div className={classList}>
             <RadioGroup
                 name={props.name}
                 selectedValue={value}

@@ -22,4 +22,33 @@
 .edit-form {
     height: 70%;
     width: 80%;
+    background-color: white;
+    white-space: pre-line;
+    padding: 8px;
+    position: relative;
+}
+
+.edit-button {
+    height: 18px;
+    width: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.edit-window {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+}
+
+.edit-window textarea{
+    font: inherit;
 }
