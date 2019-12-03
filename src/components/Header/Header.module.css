@@ -13,6 +13,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.left * {
     padding-left: 2vw;
 }
 
@@ -22,10 +25,4 @@
     justify-content: flex-end;
     align-items: center;
     padding-right: 2vw;
-}
-
-.center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
 }

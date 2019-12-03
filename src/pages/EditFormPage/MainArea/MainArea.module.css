@@ -20,12 +20,13 @@
 }
 
 .edit-form {
-    height: 70%;
+    height: 70vh;
     width: 80%;
     background-color: white;
     white-space: pre-line;
     padding: 8px;
     position: relative;
+    overflow: auto;
 }
 
 .edit-button {

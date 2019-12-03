@@ -12,10 +12,11 @@ const MainArea = (props) => {
   const editWindow =
     <div className={classes["edit-window"]}>
       <TextArea
-        value={value} />
+        value={value} 
+        onChange={(text) => props.changeFieldText(props.currentField, text)}/>
       <div className={classes["edit-button"]}
         style={{ backgroundImage: `url(${closeIcon})` }}
-        onClick={() => { toggleEditMode(false) }} />
+        onClick={() => { toggleEditMode(false); }} />
     </div>
   return (
     <div className={classes.main}>
@@ -30,7 +31,7 @@ const MainArea = (props) => {
       </SideMenu>
       <div className={classes.wrapper}>
         <span className={classes.tip}>Описание твоей идеи было собрано и сведено ниже. Ты можешь оставить формулировку идеи такой или отредактировать, чтобы донести суть и ценность твоей идеи.</span>
-        <div className={classes["edit-form"]}>
+        <div className={classes["edit-form"]} style={{overflow: editMode ? "hidden" : "auto"}}>
           <div className={classes["edit-button"]}
             style={{ backgroundImage: `url(${editIcon})` }}
             onClick={() => { toggleEditMode(true) }} />

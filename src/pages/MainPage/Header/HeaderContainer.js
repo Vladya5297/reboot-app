@@ -7,12 +7,14 @@ import * as types from '../../../store/itemTypes'
 import { NavLink } from 'react-router-dom'
 import fieldsProps from '../../../store/formFields'
 import { changeFieldText } from '../../../store/actionCreators'
+import TimeLine from '../../../components/TimeLine/TimeLine'
+
 
 const HeaderContainer = (props) => {
   return (
     <Header>
       <img src={logo} alt="Logo" />
-      <> </>
+      <TimeLine />
       <>
         <Button isAccent={false} clickHandler={() => { alert("Сохранено") }}>Сохранить черновик</Button>
         <Button isAccent={true} disabled={props.disabled}
