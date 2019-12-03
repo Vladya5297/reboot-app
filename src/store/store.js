@@ -5,11 +5,13 @@ import stickers from './reducers/stickers'
 import stickerDragging from './reducers/stickerDragging'
 import stickerEditingWindow from './reducers/stickerEditingWindow'
 import hover from './reducers/hover'
+import currentField from './reducers/currentField'
 
 export default createStore(combineReducers({
     stickers,
     stickerDragging,
     stickerEditingWindow,
     hover,
+    currentField,
 }),
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

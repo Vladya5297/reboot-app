@@ -1,7 +1,28 @@
 .wrapper {
-    height: 100%;
     width: 20vw;
     background-color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.radio {
+    width: 75%;
+    padding: 10px;
+    margin: 5px;
+    word-wrap: break-word;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.checked {
+    background: linear-gradient(207.47deg, #6F27E2 33.26%, #8D33C6 91.4%);
+    border-radius: 25px;
+    color: white;
 }

@@ -1,13 +1,20 @@
-import React from 'react'
 import MainArea from './MainArea';
+import { connect } from 'react-redux'
+import fieldsProps from '../../../store/formFields'
 
-// Этот компонент был создан, чтобы разгрузить компонент MainArea
-// Вынос логики из презентационного компонента - стандартная практика
-const MainAreaContainer = (props) => {
-  return (
-      <MainArea>
-      </MainArea>
-  )
-}
+const mapStateToProps = (state) => ({
+  value: (() => {
+    const stickers = [];
+    const fieldType = fieldsProps[state.currentField].type;
+    for (let type of fieldType) {
+      stickers.push(...state.stickers.array.filter(sticker =>
+        sticker.type === type)
+      )
+    }
+    return stickers.map(sticker => sticker.content).join("\n\n");
+  })()
+});
 
-export default MainAreaContainer;
+export default connect(
+  mapStateToProps
+)(MainArea);
