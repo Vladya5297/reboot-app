@@ -25,7 +25,7 @@ const HeaderContainer = (props) => {
               height: "100%",
               width: "100%"
             }} />
-          Сформулировать идею
+          Формулировка идеи
           </Button>
       </>
     </Header>

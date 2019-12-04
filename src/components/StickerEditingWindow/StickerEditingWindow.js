@@ -41,7 +41,7 @@ const StickerEditingWindow = (props) => {
                     <Button isAccent={true} clickHandler={() => {
                         props.closeWindow();
                         props.changeStickerText(props.sticker.id, header, content);
-                    }}>Принять</Button>
+                    }}>Сохранить</Button>
                 </div>
 
                 <div className={classes.delete}

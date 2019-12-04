@@ -1,8 +1,8 @@
 import React from 'react'
 import { withRouter } from "react-router";
 import * as fields from '../../store/routes'
-import timeline1 from '../../icons/timeline1.png'
-import timeline2 from '../../icons/timeline2.png'
+import timeline1 from '../../icons/timeline1.svg'
+import timeline2 from '../../icons/timeline2.svg'
 
 const TimeLine = (props) => {
     return (
