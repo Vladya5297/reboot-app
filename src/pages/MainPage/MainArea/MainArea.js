@@ -17,7 +17,7 @@ const MainArea = (props) => {
         <TextArea 
           placeholder={"Введите название идеи"}
           maxLength={42}
-          value={props.value}
+          value={props.theme}
           onChange={(theme) => { props.changeTheme(theme) }}
         />
       </div>

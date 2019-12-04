@@ -1,8 +1,8 @@
 import React from 'react'
 import { withRouter } from "react-router";
 import * as fields from '../../store/routes'
-import timeline1 from '../../icons/timeline1.svg'
-import timeline2 from '../../icons/timeline2.svg'
+import timeline1 from '../../icons/timeline1.png'
+import timeline2 from '../../icons/timeline2.png'
 
 const TimeLine = (props) => {
     return (
@@ -11,21 +11,13 @@ const TimeLine = (props) => {
             alignItems: "center",
             position: "relative"
         }}>
-            <div style={{
-                position: "absolute",
-                height: "100%",
-                width: "100px",
-                left: "-10px",
-                cursor: "pointer"
-            }}
-            onClick={()=>props.history.goBack()}/>
             <img style={{
                 pointerEvents: "none"
             }}
-            src={
-                (props.match.path === fields.main && timeline1) ||
-                (props.match.path === fields.editForm && timeline2)
-            } alt="timeline" />
+                src={
+                    (props.match.path === fields.main && timeline1) ||
+                    (props.match.path === fields.editForm && timeline2)
+                } alt="timeline" />
         </div>
     )
 }
