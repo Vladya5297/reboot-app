@@ -7,7 +7,7 @@ import TimeLine from '../../../components/TimeLine/TimeLine'
 const HeaderContainer = (props) => {
     return (
         <Header>
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo"/>
             <TimeLine />
             <Button isAccent={true} clickHandler={() => { alert("Подано") }}>Подать идею</Button>
         </Header>

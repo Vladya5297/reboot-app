@@ -39,6 +39,7 @@ const mapStateToProps = (state) => ({
         .filter(elem => elem.type === type);
       if (!stickers.length) return true;
     }
+    if (!state.theme) return true;
     return false;
   })(),
   stickers: state.stickers.array

@@ -14,3 +14,7 @@ textarea::placeholder {
   opacity: 0.6;
   font-weight: normal;
 }
+
+textarea:disabled {
+  background-color: white;
+}

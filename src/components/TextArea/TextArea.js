@@ -13,9 +13,12 @@ const TextArea = (props) => {
       props.onChange(event.target.value);
   };
   return (
-      <textarea
-        value={text}
-        onChange={handleChange} />
+    <textarea
+      placeholder={props.placeholder}
+      value={text}
+      onChange={handleChange}
+      maxLength={props.maxLength}
+      disabled={props.disabled} />
   );
 };
 

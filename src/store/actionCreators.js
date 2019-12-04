@@ -10,6 +10,7 @@ import {ADD_STICKER,
     CHANGE_HOVER,
     CHANGE_FIELD,
     CHANGE_FIELD_TEXT,
+    CHANGE_THEME,
 } from './actionTypes'
 
 
@@ -35,3 +36,5 @@ export function changeHover(hover) {return {type: CHANGE_HOVER, hover}}
 export function changeField(field) {return {type: CHANGE_FIELD, field}}
 
 export function changeFieldText(field, text) {return {type: CHANGE_FIELD_TEXT, field, text}}
+
+export function changeTheme(theme) {return {type: CHANGE_THEME, theme}}

@@ -7,6 +7,7 @@ import stickerEditingWindow from './reducers/stickerEditingWindow'
 import hover from './reducers/hover'
 import currentField from './reducers/currentField'
 import fieldValues from './reducers/fieldValues'
+import theme from './reducers/theme'
 
 export default createStore(combineReducers({
     stickers,
@@ -15,5 +16,6 @@ export default createStore(combineReducers({
     hover,
     currentField,
     fieldValues,
+    theme,
 }),
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());

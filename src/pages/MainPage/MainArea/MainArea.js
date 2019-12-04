@@ -1,24 +1,34 @@
 import React from 'react'
-import style from './MainArea.module.css'
+import classes from './MainArea.module.css'
+import TextArea from '../../../components/TextArea/TextArea'
 
 const MainArea = (props) => {
   return (
-    <div className={style.main}>
-      
-      <div className={style["work-area-wrapper"]}>
-        <div className={style.title}>ВАШ ПРОДУКТ</div>
-        <div className={style["work-area"]}>
+    <div className={classes.main}>
+
+      <div className={classes["work-area-wrapper"]}>
+        <div className={classes.title}>ВАШ ПРОДУКТ</div>
+        <div className={classes["work-area"]}>
           {props.children[0]}
         </div>
       </div>
 
-      <div className={style["work-area-wrapper"]}>
-        <div className={style.title}>ВАШ КЛИЕНТ</div>
-        <div className={style["work-area"]}>
+      <div className={classes["theme-field"]}>
+        <TextArea 
+          placeholder={"Введите название идеи"}
+          maxLength={42}
+          value={props.value}
+          onChange={(theme) => { props.changeTheme(theme) }}
+        />
+      </div>
+
+      <div className={classes["work-area-wrapper"]}>
+        <div className={classes.title}>ВАШ КЛИЕНТ</div>
+        <div className={classes["work-area"]}>
           {props.children[1]}
         </div>
       </div>
-      
+
     </div>
   );
 }

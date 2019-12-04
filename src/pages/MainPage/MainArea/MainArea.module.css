@@ -27,3 +27,15 @@
     margin-bottom: 2vh;
     font-size: 1.2rem;
 }
+
+.theme-field {
+    height: 40px;
+    width: 300px;
+    position: absolute;
+}
+
+.theme-field textarea {
+    font: inherit;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}

@@ -37,7 +37,6 @@ const Segment = (props) => {
 
     return (
         <div className={style.wrapper} ref={drop} 
-        onMouseEnter={()=>props.changeHover(props.type)}
         onMouseLeave={()=>props.changeHover("")}
         onMouseOver={()=>{props.hover !== props.type && props.changeHover(props.type)}}
             style={{

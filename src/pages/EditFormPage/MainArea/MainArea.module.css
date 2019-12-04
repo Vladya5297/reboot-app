@@ -20,7 +20,7 @@
 }
 
 .edit-form {
-    height: 70vh;
+    height: 60vh;
     width: 80%;
     background-color: white;
     white-space: pre-line;
@@ -52,4 +52,13 @@
 
 .edit-window textarea{
     font: inherit;
+}
+
+.theme {
+    width: 80%;
+    text-align: center;
+    background-color: white;
+    padding: 8px;
+    font-size: 1.1rem;
+    border-bottom: solid 1px #e4e4e4;
 }

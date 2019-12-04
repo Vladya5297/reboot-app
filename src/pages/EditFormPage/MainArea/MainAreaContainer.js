@@ -5,6 +5,7 @@ import { changeField, changeFieldText } from '../../../store/actionCreators'
 const mapStateToProps = (state) => ({
   value: state.fieldValues[state.currentField],
   currentField: state.currentField,
+  theme: state.theme
 });
 
 const mapDispatchToProps = (dispatch) => ({
