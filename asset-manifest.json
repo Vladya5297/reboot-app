@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/CROCapp/static/css/main.cabc5919.chunk.css",
+    "main.js": "/CROCapp/static/js/main.7771fa92.chunk.js",
+    "main.js.map": "/CROCapp/static/js/main.7771fa92.chunk.js.map",
+    "runtime-main.js": "/CROCapp/static/js/runtime-main.f577538f.js",
+    "runtime-main.js.map": "/CROCapp/static/js/runtime-main.f577538f.js.map",
+    "static/css/2.dfe7030c.chunk.css": "/CROCapp/static/css/2.dfe7030c.chunk.css",
+    "static/js/2.7e3ac930.chunk.js": "/CROCapp/static/js/2.7e3ac930.chunk.js",
+    "static/js/2.7e3ac930.chunk.js.map": "/CROCapp/static/js/2.7e3ac930.chunk.js.map",
+    "index.html": "/CROCapp/index.html",
+    "precache-manifest.8b3616c656a2f239988498f7ec574930.js": "/CROCapp/precache-manifest.8b3616c656a2f239988498f7ec574930.js",
+    "service-worker.js": "/CROCapp/service-worker.js",
+    "static/css/2.dfe7030c.chunk.css.map": "/CROCapp/static/css/2.dfe7030c.chunk.css.map",
+    "static/css/main.cabc5919.chunk.css.map": "/CROCapp/static/css/main.cabc5919.chunk.css.map",
+    "static/media/App.css": "/CROCapp/static/media/Circe-Regular.6b28c593.ttf",
+    "static/media/CloseIcon.svg": "/CROCapp/static/media/CloseIcon.40000a14.svg",
+    "static/media/EditIcon.svg": "/CROCapp/static/media/EditIcon.d5a0fa09.svg",
+    "static/media/Logo.svg": "/CROCapp/static/media/Logo.b40c2faf.svg",
+    "static/media/HelpIcon.module.css": "/CROCapp/static/media/QuestionMarkIcon.fff4a55f.svg",
+    "static/media/StickerEditingWindow.module.css": "/CROCapp/static/media/TrashIcon.b6b71c63.svg",
+    "static/media/timeline1.svg": "/CROCapp/static/media/timeline1.6afa5d22.svg",
+    "static/media/timeline2.svg": "/CROCapp/static/media/timeline2.bb43d72a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f577538f.js",
+    "static/css/2.dfe7030c.chunk.css",
+    "static/js/2.7e3ac930.chunk.js",
+    "static/css/main.cabc5919.chunk.css",
+    "static/js/main.7771fa92.chunk.js"
+  ]
+}
