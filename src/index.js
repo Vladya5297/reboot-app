@@ -13,7 +13,7 @@ import { BrowserRouter } from 'react-router-dom'
 store был доступен внутри компонентов */
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <DndProvider backend={HTML5Backend}>
                 <App />
             </DndProvider>
