@@ -7,17 +7,17 @@ import { Provider } from 'react-redux'
 import store from './store/store'
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DndProvider } from 'react-dnd'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 /* оборачиваем весь App в Provider, чтобы 
 store был доступен внутри компонентов */
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <DndProvider backend={HTML5Backend}>
                 <App />
             </DndProvider>
-        </BrowserRouter>
+        </HashRouter>
     </Provider>,
     document.getElementById('root')
 );
