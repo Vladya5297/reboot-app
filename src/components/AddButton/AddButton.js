@@ -11,7 +11,6 @@ const AddButton = (props) => {
         <div className={classes.wrapper}
         onClick={()=>{
             props.addSticker(props.type);
-            console.log(props.currentId);
             props.openStickerEditingWindow(props.currentId + 1, props.type);
         }}
             style={{

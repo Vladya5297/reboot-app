@@ -11,7 +11,12 @@ const StickerEditingWindow = (props) => {
         <div className={classes.blur} onClick={(event) => {
             event.stopPropagation();
         }}>
-            <div className={classes.wrapper}>
+            <div className={classes.wrapper} onKeyDown={(event) => {
+                if (event.key === 'Enter') {
+                    props.closeWindow();
+                    props.changeStickerText(props.sticker.id, header, content);
+                }
+            }}>
 
                 <div className={classes.title}>
                     {typeProperties[props.sticker.type].title}
@@ -37,17 +42,15 @@ const StickerEditingWindow = (props) => {
                 </div>
 
                 <div className={classes.footer}>
-                    <Button isAccent={false} clickHandler={props.closeWindow}>Отмена</Button>
                     <Button isAccent={true} clickHandler={() => {
                         props.closeWindow();
                         props.changeStickerText(props.sticker.id, header, content);
                     }}>Сохранить</Button>
                 </div>
 
-                <div className={classes.delete}
+                <div className={classes.close}
                     onClick={() => {
                         props.closeWindow();
-                        props.deleteSticker(props.sticker.id);
                     }} />
             </div>
         </div>

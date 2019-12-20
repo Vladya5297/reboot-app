@@ -2,7 +2,7 @@
 .main {
     flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #E4E4E4;
 }
 
@@ -37,6 +37,6 @@
 
 .theme-field textarea {
     font: inherit;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
 }
