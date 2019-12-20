@@ -31,7 +31,7 @@ const Sticker = (props) => {
         onClick={() => {props.openStickerEditingWindow(props.id, props.type)}}
         >
             {props.header}
-            {props.content && "..."}
+            {props.content && <><br />...</>}
         </div>
     )
 }

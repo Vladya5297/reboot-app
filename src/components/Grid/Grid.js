@@ -15,7 +15,7 @@ const Grid = (props) => {
             </Slot>)
     }
     return (
-        <SimpleBar style={{ height: "15vw", width: "100%" }} >
+        <SimpleBar style={{ height: "32vh", width: "100%" }} >
             <div className={style.wrapper}>
                 {slots}
                 <AddButton type={props.type} />

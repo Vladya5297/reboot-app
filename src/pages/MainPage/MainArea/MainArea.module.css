@@ -7,8 +7,8 @@
 }
 
 .work-area {
-    height: 36vw;
-    width: 36vw;
+    height: 78vh;
+    width: 40vw;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -32,10 +32,11 @@
     height: 40px;
     width: 300px;
     position: absolute;
+    margin-top: 10px
 }
 
 .theme-field textarea {
     font: inherit;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
     text-align: center;
 }

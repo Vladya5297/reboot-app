@@ -15,19 +15,16 @@ const HeaderContainer = (props) => {
     <Header>
       <img src={logo} alt="Logo" />
       <TimeLine />
-      <>
-        <Button isAccent={false} clickHandler={() => { alert("Сохранено") }}>Сохранить черновик</Button>
-        <Button isAccent={true} disabled={props.disabled}
-        clickHandler={()=>{props.fillFields(props.stickers)}}>
-          <NavLink to="/edit-form"
-            style={{
-              position: "absolute",
-              height: "100%",
-              width: "100%"
-            }} />
-          Формулировка идеи
+      <Button isAccent={true} disabled={props.disabled}
+        clickHandler={() => { props.fillFields(props.stickers) }}>
+        <NavLink to="/edit-form"
+          style={{
+            position: "absolute",
+            height: "100%",
+            width: "100%"
+          }} />
+        Формулировка идеи
           </Button>
-      </>
     </Header>
   )
 }
