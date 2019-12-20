@@ -21,6 +21,8 @@ const Sticker = (props) => {
         }
     });
 
+    const [hover, setHover] = React.useState(false);
+
     return (
         <div ref={drag}
         style={{
@@ -29,7 +31,17 @@ const Sticker = (props) => {
         }}
         className={`${style.wrapper} ${style.stickerFonts}`}
         onClick={() => {props.openStickerEditingWindow(props.id, props.type)}}
+        onMouseOver={()=>{!hover && setHover(true)}}
+        onMouseLeave={()=>{setHover(false)}}
         >
+            <div className={style.delete}
+            style={{
+                visibility: hover ? "visible" : "hidden"
+            }} 
+            onClick={(event)=>{
+                event.stopPropagation();
+                props.deleteSticker(props.id);
+                }}/>
             {props.header}
             {props.content && <><br />...</>}
         </div>
